@@ -6,56 +6,111 @@
 
 <meta charset="UTF-8">
 
-<title>Kaiyu Invest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Kaiyu Invest V2</title>
 
 
 <style>
 
+
 body{
 
-background:#111827;
+background:#0f172a;
 
 color:white;
 
-font-family:Arial;
+font-family:"Microsoft YaHei";
 
-padding:20px;
+padding:15px;
 
 }
+
+
+h1{
+
+text-align:center;
+
+}
+
+
+
+.time{
+
+text-align:center;
+
+color:#94a3b8;
+
+}
+
 
 
 .card{
 
-background:#1f2937;
+background:#1e293b;
 
-padding:20px;
+padding:18px;
 
-margin:20px 0;
+border-radius:18px;
 
-border-radius:15px;
+margin:15px 0;
+
 
 }
 
 
-.green{
+.item{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:12px 0;
+
+border-bottom:1px solid #334155;
+
+
+}
+
+
+
+.low{
 
 color:#22c55e;
 
+font-weight:bold;
+
 }
 
 
-.yellow{
+.normal{
 
 color:#facc15;
 
+font-weight:bold;
+
 }
 
 
-.red{
+.high{
 
 color:#ef4444;
 
+font-weight:bold;
+
 }
+
+
+
+.title{
+
+font-size:20px;
+
+margin-bottom:10px;
+
+}
+
 
 
 </style>
@@ -64,35 +119,186 @@ color:#ef4444;
 </head>
 
 
-
 <body>
 
 
 <h1>📈 Kaiyu Invest</h1>
 
-<p>我的投资估值助手</p>
+
+<div class="time">
+
+更新时间：
+
+<script>
+
+document.write(new Date().toLocaleDateString());
+
+</script>
+
+</div>
 
 
 
 <div class="card">
 
-<h2>🇨🇳 A股</h2>
+
+<div class="title">
+
+📊 市场估值
+
+</div>
 
 
-<p>
-中证红利：
-<span class="yellow">
-PE 8.1 （正常）
+
+<h3>🇨🇳 中国市场</h3>
+
+
+
+<div class="item">
+
+<span>
+中证红利
 </span>
-</p>
 
 
-<p>
-红利低波：
-<span class="yellow">
-PE 7.6 （正常）
+<span>
+
+PE 8.1
+
+<br>
+
+<span class="low">
+
+🟢低估
+
 </span>
-</p>
+
+</span>
+
+
+</div>
+
+
+
+<div class="item">
+
+
+<span>
+红利低波
+</span>
+
+
+<span>
+
+PE 7.6
+
+<br>
+
+<span class="low">
+
+🟢低估
+
+</span>
+
+
+</span>
+
+
+</div>
+
+
+
+<h3>🇺🇸 美国市场</h3>
+
+
+<div class="item">
+
+
+<span>
+
+标普500
+
+</span>
+
+
+<span>
+
+PE 20.8
+
+<br>
+
+<span class="normal">
+
+🟡正常
+
+</span>
+
+</span>
+
+
+</div>
+
+
+
+<div class="item">
+
+
+<span>
+
+纳斯达克100
+
+</span>
+
+
+<span>
+
+PE 30.8
+
+<br>
+
+<span class="high">
+
+🔴偏高
+
+</span>
+
+</span>
+
+
+</div>
+
+
+
+<h3>🥇黄金</h3>
+
+
+<div class="item">
+
+
+<span>
+
+黄金
+
+</span>
+
+
+<span>
+
+778元
+
+<br>
+
+<span class="normal">
+
+🟡观察
+
+</span>
+
+</span>
+
+
+</div>
+
 
 
 </div>
@@ -100,25 +306,96 @@ PE 7.6 （正常）
 
 
 
+
 <div class="card">
 
-<h2>🇺🇸 美股</h2>
+
+<div class="title">
+
+💰 我的投资账户
+
+</div>
 
 
-<p>
-标普500：
-<span class="yellow">
-PE 20.8 （正常）
+
+<div class="item">
+
+<span>
+
+备用金
+
 </span>
-</p>
 
 
-<p>
-纳斯达克100：
-<span class="red">
-PE 30.8 （偏高）
+<span>
+
+12000 / 12000
+
 </span>
-</p>
+
+
+</div>
+
+
+
+<div class="item">
+
+<span>
+
+纳斯达克
+
+</span>
+
+
+<span>
+
+长期定投
+
+</span>
+
+
+</div>
+
+
+
+<div class="item">
+
+<span>
+
+标普500
+
+</span>
+
+
+<span>
+
+长期定投
+
+</span>
+
+
+</div>
+
+
+
+<div class="item">
+
+<span>
+
+机会账户
+
+</span>
+
+
+<span>
+
+等待机会
+
+</span>
+
+
+</div>
+
 
 
 </div>
@@ -126,16 +403,40 @@ PE 30.8 （偏高）
 
 
 
+
 <div class="card">
 
-<h2>🥇 黄金</h2>
+
+<div class="title">
+
+📌 今日建议
+
+</div>
 
 
 <p>
 
-AU9999：
+🟢 中证红利：
 
-778 元/克
+可以关注
+
+</p>
+
+
+<p>
+
+🟡 标普500：
+
+保持定投
+
+</p>
+
+
+<p>
+
+🔴 纳斯达克：
+
+等待更好价格
 
 </p>
 
