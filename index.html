@@ -6,7 +6,16 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="theme-color" content="#0f172a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kaiyu">
+
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" type="image/png" href="icon-192.png">
 
 <title>Kaiyu Invest</title>
 
@@ -18,64 +27,252 @@
 <body>
 
 
-<h1>📈 Kaiyu Invest</h1>
+<h1>
+📈 Kaiyu Invest
+</h1>
 
-<p id="date"></p>
+
+
+<nav>
+
+<button onclick="showPage('home')">
+🏠账户
+</button>
+
+
+<button onclick="showPage('valuation')">
+📊估值
+</button>
+
+
+</nav>
+
+
+
+
+
+<!-- 首页 -->
+
+<div id="home" class="page">
+
+
+<h2>
+💰账户
+</h2>
+
+
+<div id="accounts"></div>
+
+
+<button onclick="addAccount()">
+
++ 添加账户
+
+</button>
+
+
+
+<hr>
+
+
+<h2>
+🛡备用金
+</h2>
 
 
 <div class="card">
 
-<h2>💰 我的账户</h2>
+
+目标：
+
+<input 
+id="reserveTarget"
+type="number"
+value="12000">
 
 
-<div class="row">
+<br>
 
-生活账户
 
-<input id="life" type="number">
+当前：
+
+<input 
+id="reserveNow"
+type="number"
+value="0">
+
+
+
+<button onclick="saveReserve()">
+
+保存
+
+</button>
+
 
 </div>
 
 
-<div class="row">
-
-投资账户
-
-<input id="invest" type="number">
 
 </div>
 
 
-<div class="row">
 
-机会账户
 
-<input id="chance" type="number">
+
+
+
+<!--估值页面-->
+
+<div id="valuation" class="page hidden">
+
+
+<h2>
+📊市场估值
+</h2>
+
+
+
+<div class="card">
+
+
+更新时间：
+
+<span id="updateTime">
+未更新
+</span>
+
+
+<br>
+
+
+<button onclick="refreshData()">
+
+刷新
+
+</button>
+
 
 </div>
 
 
-<div class="row">
 
-备用金目标
 
-<input id="reserveTarget" type="number" value="12000">
+<div id="markets"></div>
+
+
+
+<button onclick="openAdd()">
+
++ 添加估值
+
+</button>
+
+
 
 </div>
 
 
-<div class="row">
-
-当前备用金
-
-<input id="reserve" type="number">
-
-</div>
 
 
-<button onclick="saveAccount()">
 
-保存账户
+
+
+<!-- 添加估值弹窗 -->
+
+
+<div id="addBox" class="card hidden">
+
+
+<h3>
+添加估值
+</h3>
+
+
+名称：
+
+<br>
+
+<input id="nameInput">
+
+
+
+<br>
+
+
+类型：
+
+<br>
+
+
+<select id="typeInput">
+
+
+<option value="PE">
+PE
+</option>
+
+
+<option value="PRICE">
+价格
+</option>
+
+
+</select>
+
+
+
+
+<br>
+
+
+当前值：
+
+<br>
+
+<input id="valueInput"
+type="number">
+
+
+
+<br>
+
+
+低估线：
+
+<br>
+
+<input id="lowInput"
+type="number">
+
+
+
+<br>
+
+
+高估线：
+
+<br>
+
+<input id="highInput"
+type="number">
+
+
+
+<br>
+
+
+<button onclick="addMarket()">
+
+保存
+
+</button>
+
+
+
+<button onclick="closeAdd()">
+
+取消
 
 </button>
 
@@ -86,65 +283,26 @@
 
 
 
-<div class="card">
 
 
-<h2>📊 市场估值</h2>
+<script src="data.js"></script>
 
-
-<div id="market"></div>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<h2>⭐ 添加资产</h2>
-
-
-<input id="assetName" placeholder="资产名称">
-
-
-<input id="assetPE"
-placeholder="当前PE"
-type="number">
-
-
-<input id="assetLow"
-placeholder="低估PE"
-type="number">
-
-
-<input id="assetHigh"
-placeholder="高估PE"
-type="number">
-
-
-
-<button onclick="addAsset()">
-
-添加
-
-</button>
-
-
-
-<div id="assets"></div>
-
-
-</div>
-
-
-
+<script src="api.js"></script>
 
 <script src="app.js"></script>
 
+<script>
+// 注册 Service Worker（PWA 离线支持）
+if('serviceWorker' in navigator){
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(reg => console.log('SW registered:', reg.scope))
+      .catch(err => console.log('SW registration failed:', err));
+  });
+}
+</script>
 
 </body>
+
 
 </html>
