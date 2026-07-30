@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="zh-CN">
 
 <head>
 
@@ -8,113 +8,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Kaiyu Invest</title>
 
-<title>Kaiyu Invest V2</title>
-
-
-<style>
-
-
-body{
-
-background:#0f172a;
-
-color:white;
-
-font-family:"Microsoft YaHei";
-
-padding:15px;
-
-}
-
-
-h1{
-
-text-align:center;
-
-}
-
-
-
-.time{
-
-text-align:center;
-
-color:#94a3b8;
-
-}
-
-
-
-.card{
-
-background:#1e293b;
-
-padding:18px;
-
-border-radius:18px;
-
-margin:15px 0;
-
-
-}
-
-
-.item{
-
-display:flex;
-
-justify-content:space-between;
-
-padding:12px 0;
-
-border-bottom:1px solid #334155;
-
-
-}
-
-
-
-.low{
-
-color:#22c55e;
-
-font-weight:bold;
-
-}
-
-
-.normal{
-
-color:#facc15;
-
-font-weight:bold;
-
-}
-
-
-.high{
-
-color:#ef4444;
-
-font-weight:bold;
-
-}
-
-
-
-.title{
-
-font-size:20px;
-
-margin-bottom:10px;
-
-}
-
-
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -124,278 +20,64 @@ margin-bottom:10px;
 
 <h1>📈 Kaiyu Invest</h1>
 
-
-<div class="time">
-
-更新时间：
-
-<script>
-
-document.write(new Date().toLocaleDateString());
-
-</script>
-
-</div>
-
+<p id="date"></p>
 
 
 <div class="card">
 
-
-<div class="title">
-
-📊 市场估值
-
-</div>
+<h2>💰 我的账户</h2>
 
 
+<div class="row">
 
-<h3>🇨🇳 中国市场</h3>
+生活账户
 
-
-
-<div class="item">
-
-<span>
-中证红利
-</span>
-
-
-<span>
-
-PE 8.1
-
-<br>
-
-<span class="low">
-
-🟢低估
-
-</span>
-
-</span>
-
+<input id="life" type="number">
 
 </div>
 
 
+<div class="row">
 
-<div class="item">
+投资账户
 
-
-<span>
-红利低波
-</span>
-
-
-<span>
-
-PE 7.6
-
-<br>
-
-<span class="low">
-
-🟢低估
-
-</span>
-
-
-</span>
-
+<input id="invest" type="number">
 
 </div>
 
 
-
-<h3>🇺🇸 美国市场</h3>
-
-
-<div class="item">
-
-
-<span>
-
-标普500
-
-</span>
-
-
-<span>
-
-PE 20.8
-
-<br>
-
-<span class="normal">
-
-🟡正常
-
-</span>
-
-</span>
-
-
-</div>
-
-
-
-<div class="item">
-
-
-<span>
-
-纳斯达克100
-
-</span>
-
-
-<span>
-
-PE 30.8
-
-<br>
-
-<span class="high">
-
-🔴偏高
-
-</span>
-
-</span>
-
-
-</div>
-
-
-
-<h3>🥇黄金</h3>
-
-
-<div class="item">
-
-
-<span>
-
-黄金
-
-</span>
-
-
-<span>
-
-778元
-
-<br>
-
-<span class="normal">
-
-🟡观察
-
-</span>
-
-</span>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<div class="title">
-
-💰 我的投资账户
-
-</div>
-
-
-
-<div class="item">
-
-<span>
-
-备用金
-
-</span>
-
-
-<span>
-
-12000 / 12000
-
-</span>
-
-
-</div>
-
-
-
-<div class="item">
-
-<span>
-
-纳斯达克
-
-</span>
-
-
-<span>
-
-长期定投
-
-</span>
-
-
-</div>
-
-
-
-<div class="item">
-
-<span>
-
-标普500
-
-</span>
-
-
-<span>
-
-长期定投
-
-</span>
-
-
-</div>
-
-
-
-<div class="item">
-
-<span>
+<div class="row">
 
 机会账户
 
-</span>
-
-
-<span>
-
-等待机会
-
-</span>
-
+<input id="chance" type="number">
 
 </div>
 
+
+<div class="row">
+
+备用金目标
+
+<input id="reserveTarget" type="number" value="12000">
+
+</div>
+
+
+<div class="row">
+
+当前备用金
+
+<input id="reserve" type="number">
+
+</div>
+
+
+<button onclick="saveAccount()">
+
+保存账户
+
+</button>
 
 
 </div>
@@ -407,45 +89,62 @@ PE 30.8
 <div class="card">
 
 
-<div class="title">
-
-📌 今日建议
-
-</div>
+<h2>📊 市场估值</h2>
 
 
-<p>
-
-🟢 中证红利：
-
-可以关注
-
-</p>
-
-
-<p>
-
-🟡 标普500：
-
-保持定投
-
-</p>
-
-
-<p>
-
-🔴 纳斯达克：
-
-等待更好价格
-
-</p>
+<div id="market"></div>
 
 
 </div>
 
+
+
+
+
+<div class="card">
+
+
+<h2>⭐ 添加资产</h2>
+
+
+<input id="assetName" placeholder="资产名称">
+
+
+<input id="assetPE"
+placeholder="当前PE"
+type="number">
+
+
+<input id="assetLow"
+placeholder="低估PE"
+type="number">
+
+
+<input id="assetHigh"
+placeholder="高估PE"
+type="number">
+
+
+
+<button onclick="addAsset()">
+
+添加
+
+</button>
+
+
+
+<div id="assets"></div>
+
+
+</div>
+
+
+
+
+<script src="app.js"></script>
 
 
 </body>
-
 
 </html>
