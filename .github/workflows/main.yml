@@ -1,0 +1,163 @@
+name: Update market data v7.6.2
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-market-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch latest market data
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          from datetime import datetime, timezone
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+
+          output = Path("market-data.json")
+          reader = "https://r.jina.ai/https://"
+          valuation_api = "https://danjuanfunds.com/djapi/index_eva/dj"
+
+          def fetch(url):
+              target = reader + re.sub(r"^https?://", "", url)
+              request = Request(target, headers={"User-Agent": "Kaiyu-Invest/1.0"})
+              with urlopen(request, timeout=45) as response:
+                  return response.read().decode("utf-8")
+
+          def fetch_json(url):
+              request = Request(url, headers={
+                  "Accept": "application/json, text/plain, */*",
+                  "Referer": "https://danjuanfunds.com/rn/value-center",
+                  "User-Agent": "Mozilla/5.0 (Kaiyu-Invest/1.0)"
+              })
+              with urlopen(request, timeout=45) as response:
+                  return json.loads(response.read().decode("utf-8"))
+
+          def number(text, pattern, name):
+              match = re.search(pattern, text, re.I)
+              if not match:
+                  raise ValueError(f"{name} data not found")
+              return round(float(match.group(1)), 2)
+
+          def world_pe(path, name):
+              text = fetch(f"https://worldperatio.com/index/{path}/")
+              return number(text, r"P/E Ratio\s*\n+\s*([0-9]+(?:\.[0-9]+)?)", name)
+
+          def gold_price():
+              text = fetch("https://xaus.com/api/v1/spot")
+              start = text.find('{"xau"')
+              end = text.rfind("}")
+              data = json.loads(text[start:end + 1])
+              return round(float(data["per_gram_usd"]) * float(data["fx_rates"]["CNY"]), 2)
+
+          def index_catalog():
+              payload = fetch_json(valuation_api)
+              catalog = []
+              for item in payload.get("data", {}).get("items", []):
+                  pe = float(item.get("pe") or 0)
+                  if pe <= 0:
+                      continue
+                  pct_raw = item.get("pe_percentile")
+                  pct = round(float(pct_raw) * 100, 2) if pct_raw is not None else None
+                  judge = "normal"
+                  if pct is not None and pct <= 30:
+                      judge = "low"
+                  elif pct is not None and pct >= 70:
+                      judge = "high"
+                  catalog.append({
+                      "name": item.get("name", "").strip(),
+                      "code": item.get("index_code", "").strip(),
+                      "value": round(pe, 2),
+                      "percentile": pct,
+                      "judge": judge,
+                      "updated": datetime.fromtimestamp(
+                          float(item["ts"]) / 1000, timezone.utc
+                      ).isoformat() if item.get("ts") else None
+                  })
+              if not catalog:
+                  raise ValueError("index catalog is empty")
+              return catalog
+
+          try:
+              previous = json.loads(output.read_text(encoding="utf-8"))
+          except Exception:
+              previous = {}
+
+          now = datetime.now(timezone.utc).isoformat()
+          result = {}
+
+          def update(key, field, getter):
+              try:
+                  result[key] = {field: getter(), "updated": now}
+              except Exception as error:
+                  print(f"{key} failed: {error}")
+                  if key in previous:
+                      result[key] = previous[key]
+
+          update("gold", "priceCNY", gold_price)
+          update("ndx", "value", lambda: world_pe("nasdaq-100", "Nasdaq 100"))
+          update("spx", "value", lambda: world_pe("sp-500", "S&P 500"))
+          try:
+              result["catalog"] = index_catalog()
+          except Exception as error:
+              print(f"catalog failed: {error}")
+              if "catalog" in previous:
+                  result["catalog"] = previous["catalog"]
+
+          if not result:
+              raise RuntimeError("No market data available")
+
+          result["generatedAt"] = now
+          output.write_text(
+              json.dumps(result, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8"
+          )
+          PY
+
+      - name: Save updated data v7.6.2
+        run: |
+          cp market-data.json /tmp/kaiyu-market-data.json
+
+          for attempt in 1 2 3 4 5; do
+            echo "Push attempt ${attempt}/5"
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/kaiyu-market-data.json market-data.json
+
+            if git diff --quiet -- market-data.json; then
+              echo "Market data is already current"
+              exit 0
+            fi
+
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add market-data.json
+            git commit -m "Update market data"
+
+            if git push origin HEAD:main; then
+              echo "Market data pushed successfully"
+              exit 0
+            fi
+
+            echo "Remote changed again; retrying..."
+            sleep $((attempt * 2))
+          done
+
+          echo "Unable to push market data after 5 attempts"
+          exit 1
