@@ -11,10 +11,8 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -45,30 +43,52 @@ jobs:
 
           def world_pe(path, name):
               text = fetch(f"https://worldperatio.com/index/{path}/")
-              return number(
-                  text,
-                  r"P/E Ratio\s*\n+\s*([0-9]+(?:\.[0-9]+)?)",
-                  name
-              )
+              return number(text, r"P/E Ratio\s*\n+\s*([0-9]+(?:\.[0-9]+)?)", name)
 
           def china_pe(code, name):
               text = fetch(f"https://www.etf.run/index/CSI/{code}")
-              return number(
-                  text,
-                  r"最新市盈率\s+([0-9]+(?:\.[0-9]+)?)",
-                  name
-              )
+              return number(text, r"最新市盈率\s+([0-9]+(?:\.[0-9]+)?)", name)
 
           def gold_price():
               text = fetch("https://xaus.com/api/v1/spot")
               start = text.find('{"xau"')
               end = text.rfind("}")
               data = json.loads(text[start:end + 1])
-              return round(
-                  float(data["per_gram_usd"]) *
-                  float(data["fx_rates"]["CNY"]),
-                  2
-              )
+              return round(float(data["per_gram_usd"]) * float(data["fx_rates"]["CNY"]), 2)
+
+          def index_catalog():
+              text = fetch("https://www.etf.run/indexes")
+              catalog = []
+              for line in text.splitlines():
+                  if not line.startswith("| [") or "/index/" not in line:
+                      continue
+                  cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+                  if len(cells) < 9:
+                      continue
+                  name_match = re.search(r"\[([^\]]+)\]", cells[0])
+                  if not name_match:
+                      continue
+                  try:
+                      pe = float(cells[7])
+                  except ValueError:
+                      continue
+                  pct_match = re.search(r"([0-9.]+)%", cells[8])
+                  pct = float(pct_match.group(1)) if pct_match else None
+                  judge = "normal"
+                  if pct is not None and pct <= 30:
+                      judge = "low"
+                  elif pct is not None and pct >= 70:
+                      judge = "high"
+                  catalog.append({
+                      "name": name_match.group(1),
+                      "code": cells[1],
+                      "value": round(pe, 2),
+                      "percentile": pct,
+                      "judge": judge
+                  })
+              if not catalog:
+                  raise ValueError("index catalog is empty")
+              return catalog
 
           try:
               previous = json.loads(output.read_text(encoding="utf-8"))
@@ -80,24 +100,24 @@ jobs:
 
           def update(key, field, getter):
               try:
-                  result[key] = {
-                      field: getter(),
-                      "updated": now
-                  }
+                  result[key] = {field: getter(), "updated": now}
               except Exception as error:
                   print(f"{key} failed: {error}")
                   if key in previous:
                       result[key] = previous[key]
 
           update("gold", "priceCNY", gold_price)
-          update("ndx", "value",
-                 lambda: world_pe("nasdaq-100", "Nasdaq 100"))
-          update("spx", "value",
-                 lambda: world_pe("sp-500", "S&P 500"))
-          update("csiDividend", "value",
-                 lambda: china_pe("000922", "CSI Dividend"))
-          update("dividendLowVol", "value",
-                 lambda: china_pe("930955", "Dividend Low Vol 100"))
+          update("ndx", "value", lambda: world_pe("nasdaq-100", "Nasdaq 100"))
+          update("spx", "value", lambda: world_pe("sp-500", "S&P 500"))
+          update("csiDividend", "value", lambda: china_pe("000922", "CSI Dividend"))
+          update("dividendLowVol", "value", lambda: china_pe("930955", "Dividend Low Vol 100"))
+
+          try:
+              result["catalog"] = index_catalog()
+          except Exception as error:
+              print(f"catalog failed: {error}")
+              if "catalog" in previous:
+                  result["catalog"] = previous["catalog"]
 
           if not result:
               raise RuntimeError("No market data available")
@@ -115,7 +135,6 @@ jobs:
             echo "No data changes"
             exit 0
           fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add market-data.json
