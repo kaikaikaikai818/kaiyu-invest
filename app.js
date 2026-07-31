@@ -1,5 +1,5 @@
 ﻿// =================================
-// Kaiyu Invest V5.1 Stable
+// Kaiyu Invest V7.6
 // =================================
 
 
@@ -58,15 +58,15 @@ high:850
 ];
 
 const MARKET_PRESETS = {
-  "纳斯达克100": { name:"纳斯达克100", type:"PE", value:31.4, low:25, high:35 },
-  "纳指100": { name:"纳斯达克100", type:"PE", value:31.4, low:25, high:35 },
-  "NASDAQ100": { name:"纳斯达克100", type:"PE", value:31.4, low:25, high:35 },
-  "标普500": { name:"标普500", type:"PE", value:26.74, low:18, high:28 },
-  "S&P500": { name:"标普500", type:"PE", value:26.74, low:18, high:28 },
-  "中证红利": { name:"中证红利", type:"PE", value:12.55, low:7, high:12 },
-  "红利低波": { name:"红利低波", type:"PE", value:11.25, low:6.5, high:10 },
-  "红利低波100": { name:"红利低波", type:"PE", value:11.25, low:6.5, high:10 },
   "黄金": { name:"黄金", type:"PRICE", value:887.67, low:600, high:850 }
+};
+
+const MARKET_ALIASES = {
+  "纳斯达克100":"纳指100",
+  "NASDAQ100":"纳指100",
+  "S&P500":"标普500",
+  "创业板指":"创业板",
+  "红利低波100":"红利低波"
 };
 
 function normalizeMarketName(name){
@@ -74,6 +74,41 @@ function normalizeMarketName(name){
 }
 
 let marketCatalog=[];
+
+const COMMON_MARKET_NAMES=[
+  "沪深300",
+  "中证500",
+  "中证1000",
+  "上证50",
+  "创业板",
+  "科创50",
+  "中证红利",
+  "红利低波",
+  "中证白酒",
+  "中证银行"
+];
+
+function escapeOption(value){
+  return String(value)
+    .replaceAll("&","&amp;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;");
+}
+
+function renderMarketOptions(){
+  const list=document.getElementById("marketNames");
+  if(!list || !marketCatalog.length)return;
+  const rank=new Map(COMMON_MARKET_NAMES.map((name,index)=>[name,index]));
+  const sorted=[...marketCatalog].sort((a,b)=>{
+    const aRank=rank.has(a.name)?rank.get(a.name):9999;
+    const bRank=rank.has(b.name)?rank.get(b.name):9999;
+    return aRank-bRank || a.name.localeCompare(b.name,"zh-CN");
+  });
+  list.innerHTML=sorted.map(item=>
+    `<option value="${escapeOption(item.name)}" label="${escapeOption(item.code)}"></option>`
+  ).join("");
+}
 
 
 
@@ -350,17 +385,22 @@ function addMarket(){
   }
 
   const preset = MARKET_PRESETS[key];
+  const lookupKey = normalizeMarketName(MARKET_ALIASES[key] || inputName);
   const exactCatalogItem = marketCatalog.find(item =>
-    normalizeMarketName(item.name) === key ||
-    normalizeMarketName(item.code) === key
+    normalizeMarketName(item.name) === lookupKey ||
+    normalizeMarketName(item.code) === lookupKey
   );
   const fuzzyMatches = exactCatalogItem ? [] : marketCatalog.filter(item =>
-    normalizeMarketName(item.name).includes(key)
+    normalizeMarketName(item.name).includes(lookupKey)
   );
   const catalogItem = exactCatalogItem ||
     (fuzzyMatches.length === 1 ? fuzzyMatches[0] : null);
 
   if(!preset && !catalogItem){
+    if(!marketCatalog.length){
+      alert("估值数据仍在加载，请稍后再试或先点击刷新");
+      return;
+    }
     if(fuzzyMatches.length > 1){
       alert("找到多个相似指数，请输入更完整的名称或指数代码");
     }else{
@@ -492,21 +532,16 @@ accounts.forEach(
 
 box.innerHTML+=`
 
-<div class="card market-card">
+<div class="card account-card">
 
 
-<div class="market-name">
-
-${item.name}
-
+<div class="account-main">
+<div class="market-name">${item.name}</div>
+<div class="account-money">${item.money} 元</div>
 </div>
 
 
-<div>
-
-
-${item.money} 元
-
+<div class="account-actions">
 
 ${index>0 ? `
 <button
@@ -710,12 +745,9 @@ document
 async function updateRealData(){
   const data = await getAllMarketData();
   marketCatalog = Array.isArray(data.catalog) ? data.catalog : [];
+  renderMarketOptions();
   const mappings = [
-    { names:["黄金"], result:data.gold, field:"priceCNY" },
-    { names:["纳斯达克100","纳指100"], result:data.ndx, field:"value" },
-    { names:["标普500"], result:data.spx, field:"value" },
-    { names:["中证红利"], result:data.csiDividend, field:"value" },
-    { names:["红利低波","红利低波100"], result:data.dividendLowVol, field:"value" }
+    { names:["黄金"], result:data.gold, field:"priceCNY" }
   ];
   let updatedCount = 0;
   let newestTime = null;
@@ -732,13 +764,20 @@ async function updateRealData(){
   });
 
   markets.forEach(item => {
-    if(!item.sourceCode)return;
-    const latest = marketCatalog.find(entry => entry.code === item.sourceCode);
+    const normalizedName = normalizeMarketName(
+      MARKET_ALIASES[normalizeMarketName(item.name)] || item.name
+    );
+    const latest = marketCatalog.find(entry =>
+      (item.sourceCode && entry.code === item.sourceCode) ||
+      normalizeMarketName(entry.name) === normalizedName
+    );
     if(!latest || !Number.isFinite(Number(latest.value)))return;
+    item.name = latest.name;
+    item.sourceCode = latest.code;
     item.value = Number(latest.value);
     item.autoJudge = latest.judge || "normal";
     updatedCount++;
-    const time = new Date(data.generatedAt || Date.now());
+    const time = new Date(latest.updated || data.generatedAt || Date.now());
     if(!newestTime || time > newestTime)newestTime = time;
   });
 
@@ -767,6 +806,11 @@ async function refreshData(){
         String(date.getMinutes()).padStart(2,"0");
       document.getElementById("updateTime").innerText = time;
       localStorage.setItem("updateTime", time);
+      const peItem = marketCatalog.find(item => item.updated);
+      const peDateBox = document.getElementById("peDate");
+      if(peDateBox && peItem){
+        peDateBox.innerText = new Date(peItem.updated).toLocaleDateString("zh-CN");
+      }
       if(btn) btn.innerText = `✓ 已刷新 ${result.updatedCount}项`;
     }else{
       if(btn) btn.innerText = "刷新失败";
