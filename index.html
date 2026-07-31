@@ -190,73 +190,19 @@ value="0">
 
 <br>
 
-<input id="nameInput">
+<input id="nameInput" list="marketNames" placeholder="例如：标普500">
 
+<datalist id="marketNames">
+<option value="纳斯达克100">
+<option value="标普500">
+<option value="中证红利">
+<option value="红利低波">
+<option value="黄金">
+</datalist>
 
-
-<br>
-
-
-类型：
-
-<br>
-
-
-<select id="typeInput">
-
-
-<option value="PE">
-PE
-</option>
-
-
-<option value="PRICE">
-价格
-</option>
-
-
-</select>
-
-
-
-
-<br>
-
-
-当前值：
-
-<br>
-
-<input id="valueInput"
-type="number">
-
-
-
-<br>
-
-
-低估线：
-
-<br>
-
-<input id="lowInput"
-type="number">
-
-
-
-<br>
-
-
-高估线：
-
-<br>
-
-<input id="highInput"
-type="number">
-
-
-
-<br>
+<div class="supported-tip">
+可输入指数名称或指数代码，系统会自动匹配 PE
+</div>
 
 
 <button onclick="addMarket()">
@@ -282,11 +228,11 @@ type="number">
 
 
 
-<script src="data.js?v=7.2"></script>
+<script src="data.js?v=7.4"></script>
 
-<script src="api.js?v=7.2"></script>
+<script src="api.js?v=7.4"></script>
 
-<script src="app.js?v=7.2"></script>
+<script src="app.js?v=7.4"></script>
 
 </body>
 

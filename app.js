@@ -57,6 +57,24 @@ high:850
 
 ];
 
+const MARKET_PRESETS = {
+  "纳斯达克100": { name:"纳斯达克100", type:"PE", value:31.4, low:25, high:35 },
+  "纳指100": { name:"纳斯达克100", type:"PE", value:31.4, low:25, high:35 },
+  "NASDAQ100": { name:"纳斯达克100", type:"PE", value:31.4, low:25, high:35 },
+  "标普500": { name:"标普500", type:"PE", value:26.74, low:18, high:28 },
+  "S&P500": { name:"标普500", type:"PE", value:26.74, low:18, high:28 },
+  "中证红利": { name:"中证红利", type:"PE", value:12.55, low:7, high:12 },
+  "红利低波": { name:"红利低波", type:"PE", value:11.25, low:6.5, high:10 },
+  "红利低波100": { name:"红利低波", type:"PE", value:11.25, low:6.5, high:10 },
+  "黄金": { name:"黄金", type:"PRICE", value:887.67, low:600, high:850 }
+};
+
+function normalizeMarketName(name){
+  return name.trim().replace(/\s+/g,"").toUpperCase();
+}
+
+let marketCatalog=[];
+
 
 
 
@@ -156,6 +174,17 @@ document
 
 function judge(item){
 
+if(item.autoJudge==="low"){
+return `<span class="low">🟢低估</span>`;
+}
+
+if(item.autoJudge==="high"){
+return `<span class="high">🔴高估</span>`;
+}
+
+if(item.autoJudge==="normal"){
+return `<span class="normal">🟡正常</span>`;
+}
 
 if(item.value <= item.low){
 
@@ -290,6 +319,8 @@ document
 .classList
 .remove("hidden");
 
+document.getElementById("nameInput").value="";
+document.getElementById("nameInput").focus();
 
 }
 
@@ -310,69 +341,57 @@ document
 
 
 function addMarket(){
+  const inputName = document.getElementById("nameInput").value;
+  const key = normalizeMarketName(inputName);
 
+  if(!key){
+    alert("请输入名称");
+    return;
+  }
 
-let name=
-document.getElementById("nameInput").value;
+  const preset = MARKET_PRESETS[key];
+  const exactCatalogItem = marketCatalog.find(item =>
+    normalizeMarketName(item.name) === key ||
+    normalizeMarketName(item.code) === key
+  );
+  const fuzzyMatches = exactCatalogItem ? [] : marketCatalog.filter(item =>
+    normalizeMarketName(item.name).includes(key)
+  );
+  const catalogItem = exactCatalogItem ||
+    (fuzzyMatches.length === 1 ? fuzzyMatches[0] : null);
 
+  if(!preset && !catalogItem){
+    if(fuzzyMatches.length > 1){
+      alert("找到多个相似指数，请输入更完整的名称或指数代码");
+    }else{
+      alert("没有找到这个指数，请检查名称或改用指数代码");
+    }
+    return;
+  }
 
-let type=
-document.getElementById("typeInput").value;
+  const newItem = preset ? {...preset} : {
+    name:catalogItem.name,
+    type:"PE",
+    value:catalogItem.value,
+    low:0,
+    high:Number.MAX_SAFE_INTEGER,
+    autoJudge:catalogItem.judge || "normal",
+    sourceCode:catalogItem.code
+  };
 
+  if(markets.some(item =>
+    item.name === newItem.name ||
+    (newItem.sourceCode && item.sourceCode === newItem.sourceCode)
+  )){
+    alert("该估值已经存在");
+    return;
+  }
 
-let value=
-Number(
-document.getElementById("valueInput").value
-);
-
-
-let low=
-Number(
-document.getElementById("lowInput").value
-);
-
-
-let high=
-Number(
-document.getElementById("highInput").value
-);
-
-
-
-if(!name){
-
-alert("请输入名称");
-
-return;
-
-}
-
-
-
-markets.push({
-
-name,
-
-type,
-
-value,
-
-low,
-
-high
-
-});
-
-
-
-saveData();
-
-renderMarkets();
-
-
-closeAdd();
-
-
+  markets.push(newItem);
+  saveData();
+  renderMarkets();
+  closeAdd();
+  refreshData().catch(error => console.log("新增估值刷新失败:", error));
 }
 
 
@@ -489,6 +508,16 @@ ${item.name}
 ${item.money} 元
 
 
+${index>0 ? `
+<button
+class="move"
+onclick="moveAccountUp(${index})">
+
+上移
+
+</button>
+` : ""}
+
 
 <button
 class="edit"
@@ -525,6 +554,15 @@ onclick="deleteAccount(${index})">
 
 
 
+
+
+function moveAccountUp(index){
+  if(index<=0 || index>=accounts.length)return;
+  [accounts[index-1],accounts[index]]=
+    [accounts[index],accounts[index-1]];
+  saveData();
+  renderAccounts();
+}
 
 
 function addAccount(){
@@ -671,6 +709,7 @@ document
 
 async function updateRealData(){
   const data = await getAllMarketData();
+  marketCatalog = Array.isArray(data.catalog) ? data.catalog : [];
   const mappings = [
     { names:["黄金"], result:data.gold, field:"priceCNY" },
     { names:["纳斯达克100","纳指100"], result:data.ndx, field:"value" },
@@ -690,6 +729,17 @@ async function updateRealData(){
     updatedCount++;
     const time = new Date(mapping.result.updated || Date.now());
     if(!newestTime || time > newestTime) newestTime = time;
+  });
+
+  markets.forEach(item => {
+    if(!item.sourceCode)return;
+    const latest = marketCatalog.find(entry => entry.code === item.sourceCode);
+    if(!latest || !Number.isFinite(Number(latest.value)))return;
+    item.value = Number(latest.value);
+    item.autoJudge = latest.judge || "normal";
+    updatedCount++;
+    const time = new Date(data.generatedAt || Date.now());
+    if(!newestTime || time > newestTime)newestTime = time;
   });
 
   if(updatedCount > 0){
