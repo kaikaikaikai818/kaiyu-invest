@@ -1,5 +1,5 @@
 ﻿// =================================
-// Kaiyu Invest V7.7
+// Kaiyu Invest V7.8
 // =================================
 
 
@@ -129,12 +129,17 @@ function saveData(){
 
 function judge(item){
 
+const type = String(item.type || "PE").toUpperCase();
+const positionMode = type === "POINT" || type === "PRICE";
+const lowText = positionMode ? "低位" : "低估";
+const highText = positionMode ? "高位" : "高估";
+
 if(item.autoJudge==="low"){
-return `<span class="low">🟢低估</span>`;
+return `<span class="low">🟢${lowText}</span>`;
 }
 
 if(item.autoJudge==="high"){
-return `<span class="high">🔴高估</span>`;
+return `<span class="high">🔴${highText}</span>`;
 }
 
 if(item.autoJudge==="normal"){
@@ -144,7 +149,7 @@ return `<span class="normal">🟡正常</span>`;
 if(item.value <= item.low){
 
 
-return `<span class="low">🟢低估</span>`;
+return `<span class="low">🟢${lowText}</span>`;
 
 
 }
@@ -154,7 +159,7 @@ return `<span class="low">🟢低估</span>`;
 if(item.value >= item.high){
 
 
-return `<span class="high">🔴高估</span>`;
+return `<span class="high">🔴${highText}</span>`;
 
 
 }
@@ -175,6 +180,24 @@ return `<span class="normal">🟡正常</span>`;
 // ================================
 // 市场显示
 // ================================
+
+function formatMetric(item){
+  const numericValue = Number(item.value);
+  const value = Number.isFinite(numericValue)
+    ? numericValue.toLocaleString("zh-CN", { maximumFractionDigits: 2 })
+    : item.value;
+  const type = String(item.type || "PE").toUpperCase();
+
+  if(type === "POINT"){
+    return `<span class="metric"><span class="metric-label">点位</span><span class="metric-value">${value} 点</span></span>`;
+  }
+
+  if(type === "PRICE" || item.name === "黄金"){
+    return `<span class="metric"><span class="metric-label">金价</span><span class="metric-value">${value} 元/克</span></span>`;
+  }
+
+  return `<span class="metric"><span class="metric-label">PE</span><span class="metric-value">${value} 倍</span></span>`;
+}
 
 
 function renderMarkets(){
@@ -210,11 +233,7 @@ ${item.name}
 <div class="market-info">
 
 
-<span>
-
-${item.value}
-
-</span>
+${formatMetric(item)}
 
 
 ${judge(item)}
@@ -394,10 +413,14 @@ let item =
 markets[index];
 
 
+const type = String(item.type || "PE").toUpperCase();
+const metricName = type === "POINT"
+  ? "点位"
+  : (type === "PRICE" || item.name === "黄金" ? "金价" : "PE值");
 
 let value =
 prompt(
-"请输入新的估值",
+`请输入新的${metricName}`,
 item.value
 );
 
@@ -547,4 +570,3 @@ async function refreshData(){
     refreshData().catch(e => console.log("自动刷新失败:", e));
   }, 800);
 })();
-

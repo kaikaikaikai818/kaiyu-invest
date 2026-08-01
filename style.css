@@ -1,5 +1,5 @@
 /* =========================
- Kaiyu Invest V7.7
+ Kaiyu Invest V7.8
 ========================= */
 
 
@@ -168,6 +168,24 @@ align-items:center;
 gap:12px;
 
 
+}
+
+.metric{
+display:flex;
+align-items:baseline;
+gap:5px;
+white-space:nowrap;
+}
+
+.metric-label{
+color:#cbd5e1;
+font-size:12px;
+font-weight:bold;
+}
+
+.metric-value{
+color:white;
+font-variant-numeric:tabular-nums;
 }
 
 
@@ -377,4 +395,3 @@ font-size:13px;
 
 
 }
-
