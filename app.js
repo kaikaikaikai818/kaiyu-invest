@@ -1,5 +1,5 @@
 ﻿// =================================
-// Kaiyu Invest V7.6
+// Kaiyu Invest V7.7
 // =================================
 
 
@@ -114,92 +114,12 @@ function renderMarketOptions(){
 
 
 
-let accounts =
-JSON.parse(
-localStorage.getItem("accounts")
-)
-||
-[
-{
-name:"生活账户",
-money:0
-},
-
-{
-name:"投资账户",
-money:0
-},
-
-{
-name:"机会账户",
-money:0
-}
-
-];
-
-
-
-
-
-
-
 function saveData(){
-
-
-localStorage.setItem(
-"markets",
-JSON.stringify(markets)
-);
-
-
-
-localStorage.setItem(
-"accounts",
-JSON.stringify(accounts)
-);
-
-
+  localStorage.setItem(
+    "markets",
+    JSON.stringify(markets)
+  );
 }
-
-
-
-
-
-
-
-// ================================
-// 页面切换
-// ================================
-
-
-function showPage(id){
-
-
-document
-.querySelectorAll(".page")
-.forEach(
-p=>{
-
-p.classList.add("hidden");
-
-}
-
-);
-
-
-
-document
-.getElementById(id)
-.classList.remove("hidden");
-
-
-}
-
-
-
-
-
-
 
 
 // ================================
@@ -508,219 +428,12 @@ renderMarkets();
 
 
 // ================================
-// 账户
-// ================================
-
-
-function renderAccounts(){
-
-
-let box =
-document.getElementById("accounts");
-
-
-if(!box)return;
-
-
-box.innerHTML="";
-
-
-
-accounts.forEach(
-(item,index)=>{
-
-
-box.innerHTML+=`
-
-<div class="card account-card">
-
-
-<div class="account-main">
-<div class="market-name">${item.name}</div>
-<div class="account-money">${item.money} 元</div>
-</div>
-
-
-<div class="account-actions">
-
-${index>0 ? `
-<button
-class="move"
-onclick="moveAccountUp(${index})">
-
-上移
-
-</button>
-` : ""}
-
-
-<button
-class="edit"
-onclick="editAccount(${index})">
-
-修改
-
-</button>
-
-
-
-<button
-class="delete"
-onclick="deleteAccount(${index})">
-
-删除
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-`;
-
-});
-
-
-}
-
-
-
-
-
-
-function moveAccountUp(index){
-  if(index<=0 || index>=accounts.length)return;
-  [accounts[index-1],accounts[index]]=
-    [accounts[index],accounts[index-1]];
-  saveData();
-  renderAccounts();
-}
-
-
-function addAccount(){
-
-
-let name =
-prompt("账户名称");
-
-
-if(!name)return;
-
-
-
-accounts.push({
-
-name:name,
-
-money:0
-
-});
-
-
-saveData();
-
-renderAccounts();
-
-
-}
-
-
-
-
-function editAccount(index){
-
-
-let money =
-prompt(
-"修改金额",
-accounts[index].money
-);
-
-
-
-if(money!==null){
-
-
-accounts[index].money =
-Number(money);
-
-
-saveData();
-
-renderAccounts();
-
-
-}
-
-
-}
-
-
-
-
-
-function deleteAccount(index){
-
-
-accounts.splice(index,1);
-
-
-saveData();
-
-renderAccounts();
-
-
-}
-
-
-
-
-
-
-
-// ================================
-// 备用金
-// ================================
-
-
-function saveReserve(){
-
-
-localStorage.setItem(
-"reserveTarget",
-document.getElementById("reserveTarget").value
-);
-
-
-localStorage.setItem(
-"reserveNow",
-document.getElementById("reserveNow").value
-);
-
-
-
-alert("保存成功");
-
-
-}
-
-
-
-
-
-
-
-// ================================
 // 初始化
 // ================================
 
 
 renderMarkets();
 
-renderAccounts();
 
 
 
@@ -834,3 +547,4 @@ async function refreshData(){
     refreshData().catch(e => console.log("自动刷新失败:", e));
   }, 800);
 })();
+

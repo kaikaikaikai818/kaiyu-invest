@@ -30,98 +30,9 @@
 
 
 
-<nav>
+<!-- 估值页面 -->
 
-<button onclick="showPage('home')">
-🏠账户
-</button>
-
-
-<button onclick="showPage('valuation')">
-📊估值
-</button>
-
-
-</nav>
-
-
-
-
-
-<!-- 首页 -->
-
-<div id="home" class="page">
-
-
-<h2>
-💰账户
-</h2>
-
-
-<div id="accounts"></div>
-
-
-<button onclick="addAccount()">
-
-+ 添加账户
-
-</button>
-
-
-
-<hr>
-
-
-<h2>
-🛡备用金
-</h2>
-
-
-<div class="card">
-
-
-目标：
-
-<input 
-id="reserveTarget"
-type="number"
-value="12000">
-
-
-<br>
-
-
-当前：
-
-<input 
-id="reserveNow"
-type="number"
-value="0">
-
-
-
-<button onclick="saveReserve()">
-
-保存
-
-</button>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<!--估值页面-->
-
-<div id="valuation" class="page hidden">
+<div id="valuation" class="page">
 
 
 <h2>
@@ -240,13 +151,14 @@ value="0">
 
 
 
-<script src="data.js?v=7.6"></script>
+<script src="data.js?v=7.7"></script>
 
-<script src="api.js?v=7.6"></script>
+<script src="api.js?v=7.7"></script>
 
-<script src="app.js?v=7.6"></script>
+<script src="app.js?v=7.7"></script>
 
 </body>
 
 
 </html>
+

@@ -1,5 +1,5 @@
 /* =========================
- Kaiyu Invest V7.6
+ Kaiyu Invest V7.7
 ========================= */
 
 
@@ -41,17 +41,6 @@ margin-bottom:20px;
 
 
 
-nav{
-
-
-display:flex;
-
-gap:10px;
-
-margin-bottom:20px;
-
-
-}
 
 
 
@@ -147,37 +136,10 @@ align-items:center;
 
 }
 
-.account-card{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:16px;
-}
 
-.account-main{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:16px;
-flex:1;
-min-width:0;
-}
 
-.account-money{
-white-space:nowrap;
-font-size:16px;
-}
 
-.account-actions{
-display:flex;
-align-items:center;
-gap:8px;
-}
 
-.account-actions button{
-margin:0;
-white-space:nowrap;
-}
 
 
 
@@ -407,31 +369,12 @@ font-size:13px;
 
 }
 
-.account-card{
-display:block;
-padding:14px;
-}
 
-.account-main{
-width:100%;
-margin-bottom:12px;
-}
 
-.account-money{
-font-weight:bold;
-}
 
-.account-actions{
-display:flex;
-gap:8px;
-}
 
-.account-actions button{
-flex:1;
-width:100%;
-padding:10px 6px;
-}
 
 
 
 }
+
