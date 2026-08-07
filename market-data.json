@@ -1,15 +1,15 @@
 {
   "gold": {
-    "priceCNY": 924.62,
-    "updated": "2026-08-06T23:53:34.413504+00:00"
+    "priceCNY": 926.16,
+    "updated": "2026-08-07T02:23:53.683442+00:00"
   },
   "ndx": {
     "value": 32.83,
-    "updated": "2026-08-06T23:53:34.413504+00:00"
+    "updated": "2026-08-07T02:23:53.683442+00:00"
   },
   "spx": {
     "value": 27.7,
-    "updated": "2026-08-06T23:53:34.413504+00:00"
+    "updated": "2026-08-07T02:23:53.683442+00:00"
   },
   "catalog": [
     {
@@ -39,10 +39,10 @@
     {
       "name": "中国互联",
       "code": "CSIH11136",
-      "value": 17.68,
-      "percentile": 13.16,
+      "value": 17.29,
+      "percentile": 11.6,
       "judge": "low",
-      "updated": "2026-08-04T16:00:00+00:00"
+      "updated": "2026-08-05T16:00:00+00:00"
     },
     {
       "name": "消费红利",
@@ -183,10 +183,10 @@
     {
       "name": "香港大盘",
       "code": "HSFML25",
-      "value": 9.9,
-      "percentile": 67.64,
+      "value": 9.8,
+      "percentile": 65.04,
       "judge": "normal",
-      "updated": "2026-08-04T16:00:00+00:00"
+      "updated": "2026-08-05T16:00:00+00:00"
     },
     {
       "name": "央视50",
@@ -205,20 +205,20 @@
       "updated": "2026-08-05T16:00:00+00:00"
     },
     {
+      "name": "国企指数",
+      "code": "HKHSCEI",
+      "value": 10.16,
+      "percentile": 79.4,
+      "judge": "high",
+      "updated": "2026-08-05T16:00:00+00:00"
+    },
+    {
       "name": "标普红利",
       "code": "CSPSADRP",
       "value": 10.2,
       "percentile": 99.36,
       "judge": "high",
       "updated": "2026-08-05T16:00:00+00:00"
-    },
-    {
-      "name": "国企指数",
-      "code": "HKHSCEI",
-      "value": 10.26,
-      "percentile": 81.04,
-      "judge": "high",
-      "updated": "2026-08-04T16:00:00+00:00"
     },
     {
       "name": "上证50",
@@ -239,10 +239,10 @@
     {
       "name": "恒生指数",
       "code": "HKHSI",
-      "value": 12.26,
-      "percentile": 79.96,
+      "value": 12.08,
+      "percentile": 76.76,
       "judge": "high",
-      "updated": "2026-08-04T16:00:00+00:00"
+      "updated": "2026-08-05T16:00:00+00:00"
     },
     {
       "name": "沪深300",
@@ -303,10 +303,10 @@
     {
       "name": "香港中小",
       "code": "SPHCMSHP",
-      "value": 20.08,
-      "percentile": 96.94,
+      "value": 19.9,
+      "percentile": 96.28,
       "judge": "high",
-      "updated": "2026-08-04T16:00:00+00:00"
+      "updated": "2026-08-05T16:00:00+00:00"
     },
     {
       "name": "500低波",
@@ -341,20 +341,20 @@
       "updated": "2026-08-05T16:00:00+00:00"
     },
     {
+      "name": "新经济",
+      "code": "HKHSSCNE",
+      "value": 23.43,
+      "percentile": 43.99,
+      "judge": "normal",
+      "updated": "2026-08-05T16:00:00+00:00"
+    },
+    {
       "name": "恒生科技",
       "code": "HKHSTECH",
       "value": 23.66,
       "percentile": 40.64,
       "judge": "normal",
       "updated": "2026-08-05T16:00:00+00:00"
-    },
-    {
-      "name": "新经济",
-      "code": "HKHSSCNE",
-      "value": 23.95,
-      "percentile": 49.2,
-      "judge": "normal",
-      "updated": "2026-08-04T16:00:00+00:00"
     },
     {
       "name": "新能源车",
@@ -375,10 +375,10 @@
     {
       "name": "标普500",
       "code": "SP500",
-      "value": 26.06,
-      "percentile": 64.56,
+      "value": 25.93,
+      "percentile": 63.36,
       "judge": "normal",
-      "updated": "2026-08-04T16:00:00+00:00"
+      "updated": "2026-08-05T16:00:00+00:00"
     },
     {
       "name": "深证100",
@@ -389,20 +389,20 @@
       "updated": "2026-08-05T16:00:00+00:00"
     },
     {
+      "name": "纳指100",
+      "code": "NDX",
+      "value": 30.98,
+      "percentile": 51.32,
+      "judge": "normal",
+      "updated": "2026-08-05T16:00:00+00:00"
+    },
+    {
       "name": "中证环保",
       "code": "SH000827",
       "value": 31.37,
       "percentile": 63.36,
       "judge": "normal",
       "updated": "2026-08-05T16:00:00+00:00"
-    },
-    {
-      "name": "纳指100",
-      "code": "NDX",
-      "value": 31.64,
-      "percentile": 53.28,
-      "judge": "normal",
-      "updated": "2026-08-04T16:00:00+00:00"
     },
     {
       "name": "深证成指",
@@ -509,5 +509,5 @@
       "updated": "2026-08-05T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-08-06T23:53:34.413504+00:00"
+  "generatedAt": "2026-08-07T02:23:53.683442+00:00"
 }
