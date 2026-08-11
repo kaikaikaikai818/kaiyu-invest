@@ -1,15 +1,15 @@
 {
   "gold": {
-    "priceCNY": 955.96,
-    "updated": "2026-08-11T00:02:10.326292+00:00"
+    "priceCNY": 961.74,
+    "updated": "2026-08-11T02:33:50.081208+00:00"
   },
   "ndx": {
     "value": 29.32,
-    "updated": "2026-08-11T00:02:10.326292+00:00"
+    "updated": "2026-08-11T02:33:50.081208+00:00"
   },
   "spx": {
     "value": 25.14,
-    "updated": "2026-08-11T00:02:10.326292+00:00"
+    "updated": "2026-08-11T02:33:50.081208+00:00"
   },
   "catalog": [
     {
@@ -29,18 +29,18 @@
       "updated": "2026-08-09T16:00:00+00:00"
     },
     {
-      "name": "中国互联",
-      "code": "CSIH11136",
-      "value": 17.3,
-      "percentile": 11.68,
-      "judge": "low",
-      "updated": "2026-08-06T16:00:00+00:00"
-    },
-    {
       "name": "中概互联50",
       "code": "CSIH30533",
-      "value": 17.49,
-      "percentile": 9.28,
+      "value": 17.52,
+      "percentile": 9.68,
+      "judge": "low",
+      "updated": "2026-08-09T16:00:00+00:00"
+    },
+    {
+      "name": "中国互联",
+      "code": "CSIH11136",
+      "value": 17.53,
+      "percentile": 12.72,
       "judge": "low",
       "updated": "2026-08-09T16:00:00+00:00"
     },
@@ -183,10 +183,10 @@
     {
       "name": "香港大盘",
       "code": "HSFML25",
-      "value": 9.8,
-      "percentile": 65.0,
+      "value": 9.89,
+      "percentile": 67.36,
       "judge": "normal",
-      "updated": "2026-08-06T16:00:00+00:00"
+      "updated": "2026-08-09T16:00:00+00:00"
     },
     {
       "name": "央视50",
@@ -205,18 +205,18 @@
       "updated": "2026-08-09T16:00:00+00:00"
     },
     {
-      "name": "国企指数",
-      "code": "HKHSCEI",
-      "value": 10.17,
-      "percentile": 79.48,
-      "judge": "high",
-      "updated": "2026-08-06T16:00:00+00:00"
-    },
-    {
       "name": "标普红利",
       "code": "CSPSADRP",
       "value": 10.24,
       "percentile": 99.4,
+      "judge": "high",
+      "updated": "2026-08-09T16:00:00+00:00"
+    },
+    {
+      "name": "国企指数",
+      "code": "HKHSCEI",
+      "value": 10.27,
+      "percentile": 81.12,
       "judge": "high",
       "updated": "2026-08-09T16:00:00+00:00"
     },
@@ -229,18 +229,18 @@
       "updated": "2026-08-09T16:00:00+00:00"
     },
     {
-      "name": "恒生指数",
-      "code": "HKHSI",
-      "value": 12.13,
-      "percentile": 77.56,
-      "judge": "high",
-      "updated": "2026-08-06T16:00:00+00:00"
-    },
-    {
       "name": "上证180",
       "code": "SH000010",
       "value": 12.19,
       "percentile": 82.24,
+      "judge": "high",
+      "updated": "2026-08-09T16:00:00+00:00"
+    },
+    {
+      "name": "恒生指数",
+      "code": "HKHSI",
+      "value": 12.26,
+      "percentile": 79.84,
       "judge": "high",
       "updated": "2026-08-09T16:00:00+00:00"
     },
@@ -303,10 +303,10 @@
     {
       "name": "香港中小",
       "code": "SPHCMSHP",
-      "value": 20.26,
-      "percentile": 97.47,
+      "value": 20.47,
+      "percentile": 97.84,
       "judge": "high",
-      "updated": "2026-08-06T16:00:00+00:00"
+      "updated": "2026-08-09T16:00:00+00:00"
     },
     {
       "name": "500低波",
@@ -343,16 +343,24 @@
     {
       "name": "新经济",
       "code": "HKHSSCNE",
-      "value": 23.6,
-      "percentile": 45.57,
+      "value": 23.91,
+      "percentile": 48.69,
       "judge": "normal",
-      "updated": "2026-08-06T16:00:00+00:00"
+      "updated": "2026-08-09T16:00:00+00:00"
     },
     {
       "name": "恒生科技",
       "code": "HKHSTECH",
       "value": 24.13,
       "percentile": 43.32,
+      "judge": "normal",
+      "updated": "2026-08-09T16:00:00+00:00"
+    },
+    {
+      "name": "标普500",
+      "code": "SP500",
+      "value": 25.94,
+      "percentile": 63.32,
       "judge": "normal",
       "updated": "2026-08-09T16:00:00+00:00"
     },
@@ -373,14 +381,6 @@
       "updated": "2026-08-09T16:00:00+00:00"
     },
     {
-      "name": "标普500",
-      "code": "SP500",
-      "value": 26.03,
-      "percentile": 64.48,
-      "judge": "normal",
-      "updated": "2026-08-06T16:00:00+00:00"
-    },
-    {
       "name": "深证100",
       "code": "SZ399330",
       "value": 28.69,
@@ -391,10 +391,10 @@
     {
       "name": "纳指100",
       "code": "NDX",
-      "value": 31.36,
-      "percentile": 52.44,
+      "value": 31.31,
+      "percentile": 52.24,
       "judge": "normal",
-      "updated": "2026-08-06T16:00:00+00:00"
+      "updated": "2026-08-09T16:00:00+00:00"
     },
     {
       "name": "中证环保",
@@ -509,5 +509,5 @@
       "updated": "2026-08-09T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-08-11T00:02:10.326292+00:00"
+  "generatedAt": "2026-08-11T02:33:50.081208+00:00"
 }
