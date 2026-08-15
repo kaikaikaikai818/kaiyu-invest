@@ -1,15 +1,15 @@
 {
   "gold": {
-    "priceCNY": 951.01,
-    "updated": "2026-08-15T00:54:54.096802+00:00"
+    "priceCNY": 950.81,
+    "updated": "2026-08-15T02:10:55.674054+00:00"
   },
   "ndx": {
     "value": 29.74,
-    "updated": "2026-08-15T00:54:54.096802+00:00"
+    "updated": "2026-08-15T02:10:55.674054+00:00"
   },
   "spx": {
     "value": 25.25,
-    "updated": "2026-08-15T00:54:54.096802+00:00"
+    "updated": "2026-08-15T02:10:55.674054+00:00"
   },
   "catalog": [
     {
@@ -31,18 +31,18 @@
     {
       "name": "中概互联50",
       "code": "CSIH30533",
-      "value": 16.15,
-      "percentile": 1.84,
+      "value": 16.16,
+      "percentile": 1.88,
       "judge": "low",
       "updated": "2026-08-13T16:00:00+00:00"
     },
     {
       "name": "中国互联",
       "code": "CSIH11136",
-      "value": 16.34,
-      "percentile": 4.4,
+      "value": 16.16,
+      "percentile": 3.24,
       "judge": "low",
-      "updated": "2026-08-12T16:00:00+00:00"
+      "updated": "2026-08-13T16:00:00+00:00"
     },
     {
       "name": "消费红利",
@@ -175,10 +175,10 @@
     {
       "name": "香港大盘",
       "code": "HSFML25",
-      "value": 9.61,
-      "percentile": 59.64,
+      "value": 9.57,
+      "percentile": 58.88,
       "judge": "normal",
-      "updated": "2026-08-12T16:00:00+00:00"
+      "updated": "2026-08-13T16:00:00+00:00"
     },
     {
       "name": "基本面50",
@@ -197,20 +197,20 @@
       "updated": "2026-08-13T16:00:00+00:00"
     },
     {
+      "name": "国企指数",
+      "code": "HKHSCEI",
+      "value": 9.96,
+      "percentile": 75.12,
+      "judge": "high",
+      "updated": "2026-08-13T16:00:00+00:00"
+    },
+    {
       "name": "央视50",
       "code": "SZ399550",
       "value": 9.98,
       "percentile": 73.72,
       "judge": "high",
       "updated": "2026-08-13T16:00:00+00:00"
-    },
-    {
-      "name": "国企指数",
-      "code": "HKHSCEI",
-      "value": 10.02,
-      "percentile": 76.24,
-      "judge": "high",
-      "updated": "2026-08-12T16:00:00+00:00"
     },
     {
       "name": "标普红利",
@@ -231,10 +231,10 @@
     {
       "name": "恒生指数",
       "code": "HKHSI",
-      "value": 11.82,
-      "percentile": 71.76,
+      "value": 11.72,
+      "percentile": 70.36,
       "judge": "high",
-      "updated": "2026-08-12T16:00:00+00:00"
+      "updated": "2026-08-13T16:00:00+00:00"
     },
     {
       "name": "上证180",
@@ -303,10 +303,10 @@
     {
       "name": "香港中小",
       "code": "SPHCMSHP",
-      "value": 20.35,
-      "percentile": 97.6,
+      "value": 20.12,
+      "percentile": 96.9,
       "judge": "high",
-      "updated": "2026-08-12T16:00:00+00:00"
+      "updated": "2026-08-13T16:00:00+00:00"
     },
     {
       "name": "500低波",
@@ -341,20 +341,20 @@
       "updated": "2026-08-13T16:00:00+00:00"
     },
     {
+      "name": "新经济",
+      "code": "HKHSSCNE",
+      "value": 22.69,
+      "percentile": 37.19,
+      "judge": "normal",
+      "updated": "2026-08-13T16:00:00+00:00"
+    },
+    {
       "name": "恒生科技",
       "code": "HKHSTECH",
       "value": 22.83,
       "percentile": 32.38,
       "judge": "normal",
       "updated": "2026-08-13T16:00:00+00:00"
-    },
-    {
-      "name": "新经济",
-      "code": "HKHSSCNE",
-      "value": 22.93,
-      "percentile": 39.5,
-      "judge": "normal",
-      "updated": "2026-08-12T16:00:00+00:00"
     },
     {
       "name": "基本面120",
@@ -375,10 +375,10 @@
     {
       "name": "标普500",
       "code": "SP500",
-      "value": 26.06,
-      "percentile": 64.52,
+      "value": 26.01,
+      "percentile": 64.08,
       "judge": "normal",
-      "updated": "2026-08-12T16:00:00+00:00"
+      "updated": "2026-08-13T16:00:00+00:00"
     },
     {
       "name": "深证100",
@@ -391,10 +391,10 @@
     {
       "name": "纳指100",
       "code": "NDX",
-      "value": 31.57,
-      "percentile": 53.04,
+      "value": 31.47,
+      "percentile": 52.72,
       "judge": "normal",
-      "updated": "2026-08-12T16:00:00+00:00"
+      "updated": "2026-08-13T16:00:00+00:00"
     },
     {
       "name": "中证环保",
@@ -509,5 +509,5 @@
       "updated": "2026-08-13T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-08-15T00:54:54.096802+00:00"
+  "generatedAt": "2026-08-15T02:10:55.674054+00:00"
 }
