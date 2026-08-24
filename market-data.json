@@ -1,15 +1,15 @@
 {
   "gold": {
-    "priceCNY": 1001.15,
-    "updated": "2026-08-24T00:57:06.690043+00:00"
+    "priceCNY": 1007.07,
+    "updated": "2026-08-24T02:22:21.021842+00:00"
   },
   "ndx": {
     "value": 29.02,
-    "updated": "2026-08-24T00:57:06.690043+00:00"
+    "updated": "2026-08-24T02:22:21.021842+00:00"
   },
   "spx": {
     "value": 24.9,
-    "updated": "2026-08-24T00:57:06.690043+00:00"
+    "updated": "2026-08-24T02:22:21.021842+00:00"
   },
   "catalog": [
     {
@@ -31,15 +31,15 @@
     {
       "name": "中国互联",
       "code": "CSIH11136",
-      "value": 17.84,
-      "percentile": 14.28,
+      "value": 17.82,
+      "percentile": 14.16,
       "judge": "low",
       "updated": "2026-08-20T16:00:00+00:00"
     },
     {
       "name": "中概互联50",
       "code": "CSIH30533",
-      "value": 17.95,
+      "value": 17.92,
       "percentile": 12.48,
       "judge": "low",
       "updated": "2026-08-20T16:00:00+00:00"
@@ -277,19 +277,19 @@
       "updated": "2026-08-20T16:00:00+00:00"
     },
     {
-      "name": "德国DAX",
-      "code": "GDAXI",
-      "value": 17.51,
-      "percentile": 48.92,
-      "judge": "normal",
-      "updated": "2026-08-20T16:00:00+00:00"
-    },
-    {
       "name": "中证100",
       "code": "SH000903",
       "value": 17.55,
       "percentile": 95.4,
       "judge": "high",
+      "updated": "2026-08-20T16:00:00+00:00"
+    },
+    {
+      "name": "德国DAX",
+      "code": "GDAXI",
+      "value": 18.5,
+      "percentile": 59.88,
+      "judge": "normal",
       "updated": "2026-08-20T16:00:00+00:00"
     },
     {
@@ -311,8 +311,8 @@
     {
       "name": "香港中小",
       "code": "SPHCMSHP",
-      "value": 20.08,
-      "percentile": 96.67,
+      "value": 19.97,
+      "percentile": 96.18,
       "judge": "high",
       "updated": "2026-08-20T16:00:00+00:00"
     },
@@ -407,8 +407,8 @@
     {
       "name": "纳指100",
       "code": "NDX",
-      "value": 30.64,
-      "percentile": 49.72,
+      "value": 30.77,
+      "percentile": 50.2,
       "judge": "normal",
       "updated": "2026-08-20T16:00:00+00:00"
     },
@@ -509,5 +509,5 @@
       "updated": "2026-08-20T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-08-24T00:57:06.690043+00:00"
+  "generatedAt": "2026-08-24T02:22:21.021842+00:00"
 }
