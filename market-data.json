@@ -1,15 +1,15 @@
 {
   "gold": {
-    "priceCNY": 969.59,
-    "updated": "2026-08-31T00:43:00.878839+00:00"
+    "priceCNY": 960.29,
+    "updated": "2026-08-31T06:33:47.229215+00:00"
   },
   "ndx": {
     "value": 29.14,
-    "updated": "2026-08-31T00:43:00.878839+00:00"
+    "updated": "2026-08-31T06:33:47.229215+00:00"
   },
   "spx": {
     "value": 25.02,
-    "updated": "2026-08-31T00:43:00.878839+00:00"
+    "updated": "2026-08-31T06:33:47.229215+00:00"
   },
   "catalog": [
     {
@@ -191,8 +191,8 @@
     {
       "name": "香港大盘",
       "code": "HSFML25",
-      "value": 9.3,
-      "percentile": 52.48,
+      "value": 9.27,
+      "percentile": 51.8,
       "judge": "normal",
       "updated": "2026-08-27T16:00:00+00:00"
     },
@@ -215,8 +215,8 @@
     {
       "name": "国企指数",
       "code": "HKHSCEI",
-      "value": 9.67,
-      "percentile": 69.96,
+      "value": 9.65,
+      "percentile": 69.6,
       "judge": "normal",
       "updated": "2026-08-27T16:00:00+00:00"
     },
@@ -247,8 +247,8 @@
     {
       "name": "恒生指数",
       "code": "HKHSI",
-      "value": 11.37,
-      "percentile": 64.16,
+      "value": 11.34,
+      "percentile": 63.88,
       "judge": "normal",
       "updated": "2026-08-27T16:00:00+00:00"
     },
@@ -296,7 +296,7 @@
       "name": "德国DAX",
       "code": "GDAXI",
       "value": 17.71,
-      "percentile": 50.32,
+      "percentile": 50.28,
       "judge": "normal",
       "updated": "2026-08-27T16:00:00+00:00"
     },
@@ -311,8 +311,8 @@
     {
       "name": "香港中小",
       "code": "SPHCMSHP",
-      "value": 18.39,
-      "percentile": 88.92,
+      "value": 18.34,
+      "percentile": 88.64,
       "judge": "high",
       "updated": "2026-08-27T16:00:00+00:00"
     },
@@ -384,7 +384,7 @@
       "name": "标普500",
       "code": "SP500",
       "value": 25.41,
-      "percentile": 59.32,
+      "percentile": 59.28,
       "judge": "normal",
       "updated": "2026-08-27T16:00:00+00:00"
     },
@@ -509,5 +509,5 @@
       "updated": "2026-08-27T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-08-31T00:43:00.878839+00:00"
+  "generatedAt": "2026-08-31T06:33:47.229215+00:00"
 }
