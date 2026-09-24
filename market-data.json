@@ -5,11 +5,11 @@
   },
   "ndx": {
     "value": 30.11,
-    "updated": "2026-09-23T23:28:04.759847+00:00"
+    "updated": "2026-09-24T01:35:38.066572+00:00"
   },
   "spx": {
     "value": 24.7,
-    "updated": "2026-09-23T23:28:04.759847+00:00"
+    "updated": "2026-09-24T01:35:38.066572+00:00"
   },
   "catalog": [
     {
@@ -31,8 +31,8 @@
     {
       "name": "中概互联50",
       "code": "CSIH30533",
-      "value": 16.82,
-      "percentile": 5.2,
+      "value": 16.79,
+      "percentile": 4.92,
       "judge": "low",
       "updated": "2026-09-22T16:00:00+00:00"
     },
@@ -53,20 +53,20 @@
       "updated": "2026-09-22T16:00:00+00:00"
     },
     {
+      "name": "中国互联",
+      "code": "CSIH11136",
+      "value": 20.22,
+      "percentile": 25.0,
+      "judge": "low",
+      "updated": "2026-09-22T16:00:00+00:00"
+    },
+    {
       "name": "国证食品",
       "code": "SZ399396",
       "value": 20.67,
       "percentile": 8.92,
       "judge": "low",
       "updated": "2026-09-22T16:00:00+00:00"
-    },
-    {
-      "name": "中国互联",
-      "code": "CSIH11136",
-      "value": 20.73,
-      "percentile": 27.44,
-      "judge": "low",
-      "updated": "2026-09-21T16:00:00+00:00"
     },
     {
       "name": "全指可选",
@@ -205,20 +205,20 @@
       "updated": "2026-09-22T16:00:00+00:00"
     },
     {
+      "name": "香港大盘",
+      "code": "HSFML25",
+      "value": 9.12,
+      "percentile": 47.6,
+      "judge": "normal",
+      "updated": "2026-09-22T16:00:00+00:00"
+    },
+    {
       "name": "基本面50",
       "code": "SH000925",
       "value": 9.2,
       "percentile": 51.16,
       "judge": "normal",
       "updated": "2026-09-22T16:00:00+00:00"
-    },
-    {
-      "name": "香港大盘",
-      "code": "HSFML25",
-      "value": 9.23,
-      "percentile": 50.0,
-      "judge": "normal",
-      "updated": "2026-09-21T16:00:00+00:00"
     },
     {
       "name": "50AH优选",
@@ -231,10 +231,10 @@
     {
       "name": "国企指数",
       "code": "HKHSCEI",
-      "value": 9.53,
-      "percentile": 67.48,
+      "value": 9.44,
+      "percentile": 65.96,
       "judge": "normal",
-      "updated": "2026-09-21T16:00:00+00:00"
+      "updated": "2026-09-22T16:00:00+00:00"
     },
     {
       "name": "标普红利",
@@ -263,10 +263,10 @@
     {
       "name": "恒生指数",
       "code": "HKHSI",
-      "value": 11.07,
-      "percentile": 59.68,
+      "value": 10.98,
+      "percentile": 58.6,
       "judge": "normal",
-      "updated": "2026-09-21T16:00:00+00:00"
+      "updated": "2026-09-22T16:00:00+00:00"
     },
     {
       "name": "上证180",
@@ -327,10 +327,10 @@
     {
       "name": "香港中小",
       "code": "SPHCMSHP",
-      "value": 17.56,
-      "percentile": 81.83,
+      "value": 17.55,
+      "percentile": 81.64,
       "judge": "high",
-      "updated": "2026-09-21T16:00:00+00:00"
+      "updated": "2026-09-22T16:00:00+00:00"
     },
     {
       "name": "东证竞争",
@@ -375,10 +375,18 @@
     {
       "name": "新经济",
       "code": "HKHSSCNE",
-      "value": 25.4,
-      "percentile": 61.87,
+      "value": 24.96,
+      "percentile": 59.0,
       "judge": "normal",
-      "updated": "2026-09-21T16:00:00+00:00"
+      "updated": "2026-09-22T16:00:00+00:00"
+    },
+    {
+      "name": "标普500",
+      "code": "SP500",
+      "value": 25.32,
+      "percentile": 58.36,
+      "judge": "normal",
+      "updated": "2026-09-22T16:00:00+00:00"
     },
     {
       "name": "深证100",
@@ -387,14 +395,6 @@
       "percentile": 73.6,
       "judge": "high",
       "updated": "2026-09-22T16:00:00+00:00"
-    },
-    {
-      "name": "标普500",
-      "code": "SP500",
-      "value": 25.56,
-      "percentile": 60.6,
-      "judge": "normal",
-      "updated": "2026-09-21T16:00:00+00:00"
     },
     {
       "name": "中证环保",
@@ -415,10 +415,10 @@
     {
       "name": "纳指100",
       "code": "NDX",
-      "value": 31.36,
-      "percentile": 52.32,
+      "value": 30.93,
+      "percentile": 50.68,
       "judge": "normal",
-      "updated": "2026-09-21T16:00:00+00:00"
+      "updated": "2026-09-22T16:00:00+00:00"
     },
     {
       "name": "中证500",
@@ -509,5 +509,5 @@
       "updated": "2026-09-22T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-09-23T23:28:04.759847+00:00"
+  "generatedAt": "2026-09-24T01:35:38.066572+00:00"
 }
