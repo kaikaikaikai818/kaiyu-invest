@@ -1,25 +1,17 @@
 {
   "gold": {
-    "priceCNY": 886.64,
-    "updated": "2026-10-20T01:27:46.437064+00:00"
+    "priceCNY": 888.89,
+    "updated": "2026-10-20T06:22:26.754162+00:00"
   },
   "ndx": {
     "value": 27.21,
-    "updated": "2026-10-20T01:27:46.437064+00:00"
+    "updated": "2026-10-20T06:22:26.754162+00:00"
   },
   "spx": {
     "value": 23.97,
-    "updated": "2026-10-20T01:27:46.437064+00:00"
+    "updated": "2026-10-20T06:22:26.754162+00:00"
   },
   "catalog": [
-    {
-      "name": "50AH优选",
-      "code": "SH000170",
-      "value": 3.25,
-      "percentile": 0.04,
-      "judge": "low",
-      "updated": "2026-10-18T16:00:00+00:00"
-    },
     {
       "name": "养老产业",
       "code": "SZ399812",
@@ -39,18 +31,18 @@
     {
       "name": "中概互联50",
       "code": "CSIH30533",
-      "value": 16.1,
-      "percentile": 1.88,
+      "value": 16.11,
+      "percentile": 1.92,
       "judge": "low",
       "updated": "2026-10-18T16:00:00+00:00"
     },
     {
       "name": "中国互联",
       "code": "CSIH11136",
-      "value": 18.71,
-      "percentile": 17.08,
+      "value": 18.72,
+      "percentile": 17.16,
       "judge": "low",
-      "updated": "2026-10-15T16:00:00+00:00"
+      "updated": "2026-10-18T16:00:00+00:00"
     },
     {
       "name": "新能源车",
@@ -199,8 +191,8 @@
     {
       "name": "中证1000",
       "code": "SH000852",
-      "value": 38.61,
-      "percentile": 51.68,
+      "value": 38.43,
+      "percentile": 50.72,
       "judge": "normal",
       "updated": "2026-10-18T16:00:00+00:00"
     },
@@ -253,12 +245,20 @@
       "updated": "2026-10-18T16:00:00+00:00"
     },
     {
+      "name": "50AH优选",
+      "code": "SH000170",
+      "value": 9.03,
+      "percentile": 31.12,
+      "judge": "normal",
+      "updated": "2026-10-18T16:00:00+00:00"
+    },
+    {
       "name": "香港大盘",
       "code": "HSFML25",
       "value": 9.07,
-      "percentile": 46.4,
+      "percentile": 46.36,
       "judge": "normal",
-      "updated": "2026-10-15T16:00:00+00:00"
+      "updated": "2026-10-18T16:00:00+00:00"
     },
     {
       "name": "300价值",
@@ -280,9 +280,9 @@
       "name": "国企指数",
       "code": "HKHSCEI",
       "value": 9.35,
-      "percentile": 64.52,
+      "percentile": 64.48,
       "judge": "normal",
-      "updated": "2026-10-15T16:00:00+00:00"
+      "updated": "2026-10-18T16:00:00+00:00"
     },
     {
       "name": "基本面50",
@@ -328,9 +328,9 @@
       "name": "恒生指数",
       "code": "HKHSI",
       "value": 10.7,
-      "percentile": 53.6,
+      "percentile": 53.56,
       "judge": "normal",
-      "updated": "2026-10-15T16:00:00+00:00"
+      "updated": "2026-10-18T16:00:00+00:00"
     },
     {
       "name": "上证50",
@@ -400,9 +400,9 @@
       "name": "香港中小",
       "code": "SPHCMSHP",
       "value": 16.59,
-      "percentile": 73.94,
+      "percentile": 73.91,
       "judge": "high",
-      "updated": "2026-10-15T16:00:00+00:00"
+      "updated": "2026-10-18T16:00:00+00:00"
     },
     {
       "name": "德国DAX",
@@ -440,31 +440,31 @@
       "name": "新经济",
       "code": "HKHSSCNE",
       "value": 23.29,
-      "percentile": 42.59,
+      "percentile": 42.57,
       "judge": "normal",
-      "updated": "2026-10-15T16:00:00+00:00"
+      "updated": "2026-10-18T16:00:00+00:00"
     },
     {
       "name": "标普500",
       "code": "SP500",
-      "value": 24.79,
-      "percentile": 53.88,
+      "value": 24.9,
+      "percentile": 54.8,
       "judge": "normal",
-      "updated": "2026-10-15T16:00:00+00:00"
-    },
-    {
-      "name": "纳指100",
-      "code": "NDX",
-      "value": 29.39,
-      "percentile": 41.4,
-      "judge": "normal",
-      "updated": "2026-10-15T16:00:00+00:00"
+      "updated": "2026-10-18T16:00:00+00:00"
     },
     {
       "name": "中证500",
       "code": "SH000905",
       "value": 29.51,
       "percentile": 69.4,
+      "judge": "normal",
+      "updated": "2026-10-18T16:00:00+00:00"
+    },
+    {
+      "name": "纳指100",
+      "code": "NDX",
+      "value": 29.74,
+      "percentile": 43.0,
       "judge": "normal",
       "updated": "2026-10-18T16:00:00+00:00"
     },
@@ -509,5 +509,5 @@
       "updated": "2026-10-18T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-10-20T01:27:46.437064+00:00"
+  "generatedAt": "2026-10-20T06:22:26.754162+00:00"
 }
