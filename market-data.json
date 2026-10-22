@@ -1,15 +1,15 @@
 {
   "gold": {
-    "priceCNY": 887.26,
-    "updated": "2026-10-22T00:04:28.266869+00:00"
+    "priceCNY": 879.8,
+    "updated": "2026-10-22T05:08:42.947842+00:00"
   },
   "ndx": {
     "value": 27.47,
-    "updated": "2026-10-22T00:04:28.266869+00:00"
+    "updated": "2026-10-22T05:08:42.947842+00:00"
   },
   "spx": {
     "value": 24.17,
-    "updated": "2026-10-22T00:04:28.266869+00:00"
+    "updated": "2026-10-22T05:08:42.947842+00:00"
   },
   "catalog": [
     {
@@ -31,7 +31,7 @@
     {
       "name": "中概互联50",
       "code": "CSIH30533",
-      "value": 15.56,
+      "value": 15.49,
       "percentile": 0.8,
       "judge": "low",
       "updated": "2026-10-20T16:00:00+00:00"
@@ -47,10 +47,10 @@
     {
       "name": "中国互联",
       "code": "CSIH11136",
-      "value": 18.35,
-      "percentile": 15.88,
+      "value": 17.95,
+      "percentile": 14.72,
       "judge": "low",
-      "updated": "2026-10-19T16:00:00+00:00"
+      "updated": "2026-10-20T16:00:00+00:00"
     },
     {
       "name": "消费红利",
@@ -133,6 +133,14 @@
       "updated": "2026-10-20T16:00:00+00:00"
     },
     {
+      "name": "香港大盘",
+      "code": "HSFML25",
+      "value": 8.85,
+      "percentile": 41.04,
+      "judge": "normal",
+      "updated": "2026-10-20T16:00:00+00:00"
+    },
+    {
       "name": "50AH优选",
       "code": "SH000170",
       "value": 8.91,
@@ -162,6 +170,14 @@
       "value": 20.57,
       "percentile": 44.96,
       "judge": "normal",
+      "updated": "2026-10-20T16:00:00+00:00"
+    },
+    {
+      "name": "新经济",
+      "code": "HKHSSCNE",
+      "value": 21.89,
+      "percentile": 27.83,
+      "judge": "low",
       "updated": "2026-10-20T16:00:00+00:00"
     },
     {
@@ -269,14 +285,6 @@
       "updated": "2026-10-20T16:00:00+00:00"
     },
     {
-      "name": "香港大盘",
-      "code": "HSFML25",
-      "value": 8.97,
-      "percentile": 44.24,
-      "judge": "normal",
-      "updated": "2026-10-19T16:00:00+00:00"
-    },
-    {
       "name": "中证红利",
       "code": "SH000922",
       "value": 8.99,
@@ -287,10 +295,10 @@
     {
       "name": "国企指数",
       "code": "HKHSCEI",
-      "value": 9.26,
-      "percentile": 63.32,
+      "value": 9.15,
+      "percentile": 61.48,
       "judge": "normal",
-      "updated": "2026-10-19T16:00:00+00:00"
+      "updated": "2026-10-20T16:00:00+00:00"
     },
     {
       "name": "基本面50",
@@ -335,10 +343,10 @@
     {
       "name": "恒生指数",
       "code": "HKHSI",
-      "value": 10.55,
-      "percentile": 50.44,
+      "value": 10.38,
+      "percentile": 46.92,
       "judge": "normal",
-      "updated": "2026-10-19T16:00:00+00:00"
+      "updated": "2026-10-20T16:00:00+00:00"
     },
     {
       "name": "上证50",
@@ -399,10 +407,10 @@
     {
       "name": "香港中小",
       "code": "SPHCMSHP",
-      "value": 16.51,
-      "percentile": 73.24,
+      "value": 16.37,
+      "percentile": 72.25,
       "judge": "high",
-      "updated": "2026-10-19T16:00:00+00:00"
+      "updated": "2026-10-20T16:00:00+00:00"
     },
     {
       "name": "德国DAX",
@@ -437,20 +445,12 @@
       "updated": "2026-10-20T16:00:00+00:00"
     },
     {
-      "name": "新经济",
-      "code": "HKHSSCNE",
-      "value": 22.75,
-      "percentile": 37.07,
-      "judge": "normal",
-      "updated": "2026-10-19T16:00:00+00:00"
-    },
-    {
       "name": "标普500",
       "code": "SP500",
-      "value": 24.92,
-      "percentile": 54.96,
+      "value": 24.88,
+      "percentile": 54.52,
       "judge": "normal",
-      "updated": "2026-10-19T16:00:00+00:00"
+      "updated": "2026-10-20T16:00:00+00:00"
     },
     {
       "name": "中证500",
@@ -463,10 +463,10 @@
     {
       "name": "纳指100",
       "code": "NDX",
-      "value": 29.61,
-      "percentile": 42.36,
+      "value": 29.77,
+      "percentile": 43.0,
       "judge": "normal",
-      "updated": "2026-10-19T16:00:00+00:00"
+      "updated": "2026-10-20T16:00:00+00:00"
     },
     {
       "name": "MSCI印度",
@@ -509,5 +509,5 @@
       "updated": "2026-10-20T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-10-22T00:04:28.266869+00:00"
+  "generatedAt": "2026-10-22T05:08:42.947842+00:00"
 }
