@@ -1,15 +1,15 @@
 {
   "gold": {
-    "priceCNY": 862.26,
-    "updated": "2026-10-27T00:10:57.783821+00:00"
+    "priceCNY": 861.61,
+    "updated": "2026-10-27T05:21:30.992902+00:00"
   },
   "ndx": {
     "value": 26.98,
-    "updated": "2026-10-27T00:10:57.783821+00:00"
+    "updated": "2026-10-27T05:21:30.992902+00:00"
   },
   "spx": {
     "value": 23.93,
-    "updated": "2026-10-27T00:10:57.783821+00:00"
+    "updated": "2026-10-27T05:21:30.992902+00:00"
   },
   "catalog": [
     {
@@ -31,7 +31,7 @@
     {
       "name": "中概互联50",
       "code": "CSIH30533",
-      "value": 15.14,
+      "value": 15.12,
       "percentile": 0.64,
       "judge": "low",
       "updated": "2026-10-25T16:00:00+00:00"
@@ -39,10 +39,10 @@
     {
       "name": "中国互联",
       "code": "CSIH11136",
-      "value": 17.43,
-      "percentile": 12.68,
+      "value": 17.41,
+      "percentile": 12.64,
       "judge": "low",
-      "updated": "2026-10-22T16:00:00+00:00"
+      "updated": "2026-10-25T16:00:00+00:00"
     },
     {
       "name": "新能源车",
@@ -85,18 +85,18 @@
       "updated": "2026-10-25T16:00:00+00:00"
     },
     {
-      "name": "新经济",
-      "code": "HKHSSCNE",
-      "value": 21.19,
-      "percentile": 21.5,
-      "judge": "low",
-      "updated": "2026-10-22T16:00:00+00:00"
-    },
-    {
       "name": "国证食品",
       "code": "SZ399396",
       "value": 21.36,
       "percentile": 15.84,
+      "judge": "low",
+      "updated": "2026-10-25T16:00:00+00:00"
+    },
+    {
+      "name": "新经济",
+      "code": "HKHSSCNE",
+      "value": 21.67,
+      "percentile": 26.07,
       "judge": "low",
       "updated": "2026-10-25T16:00:00+00:00"
     },
@@ -135,10 +135,10 @@
     {
       "name": "香港大盘",
       "code": "HSFML25",
-      "value": 8.64,
-      "percentile": 34.44,
+      "value": 8.73,
+      "percentile": 37.4,
       "judge": "normal",
-      "updated": "2026-10-22T16:00:00+00:00"
+      "updated": "2026-10-25T16:00:00+00:00"
     },
     {
       "name": "50AH优选",
@@ -269,19 +269,19 @@
       "updated": "2026-10-25T16:00:00+00:00"
     },
     {
-      "name": "国企指数",
-      "code": "HKHSCEI",
-      "value": 8.92,
-      "percentile": 55.32,
-      "judge": "normal",
-      "updated": "2026-10-22T16:00:00+00:00"
-    },
-    {
       "name": "红利低波",
       "code": "CSIH30269",
       "value": 8.99,
       "percentile": 80.24,
       "judge": "high",
+      "updated": "2026-10-25T16:00:00+00:00"
+    },
+    {
+      "name": "国企指数",
+      "code": "HKHSCEI",
+      "value": 9.0,
+      "percentile": 58.28,
+      "judge": "normal",
       "updated": "2026-10-25T16:00:00+00:00"
     },
     {
@@ -327,10 +327,10 @@
     {
       "name": "恒生指数",
       "code": "HKHSI",
-      "value": 10.12,
-      "percentile": 40.24,
+      "value": 10.18,
+      "percentile": 41.92,
       "judge": "normal",
-      "updated": "2026-10-22T16:00:00+00:00"
+      "updated": "2026-10-25T16:00:00+00:00"
     },
     {
       "name": "央视50",
@@ -407,10 +407,10 @@
     {
       "name": "香港中小",
       "code": "SPHCMSHP",
-      "value": 16.05,
-      "percentile": 69.59,
+      "value": 15.99,
+      "percentile": 68.56,
       "judge": "normal",
-      "updated": "2026-10-22T16:00:00+00:00"
+      "updated": "2026-10-25T16:00:00+00:00"
     },
     {
       "name": "德国DAX",
@@ -447,24 +447,24 @@
     {
       "name": "标普500",
       "code": "SP500",
-      "value": 24.44,
-      "percentile": 50.84,
+      "value": 24.59,
+      "percentile": 51.92,
       "judge": "normal",
-      "updated": "2026-10-22T16:00:00+00:00"
-    },
-    {
-      "name": "纳指100",
-      "code": "NDX",
-      "value": 28.68,
-      "percentile": 38.64,
-      "judge": "normal",
-      "updated": "2026-10-22T16:00:00+00:00"
+      "updated": "2026-10-25T16:00:00+00:00"
     },
     {
       "name": "中证500",
       "code": "SH000905",
       "value": 28.85,
       "percentile": 65.48,
+      "judge": "normal",
+      "updated": "2026-10-25T16:00:00+00:00"
+    },
+    {
+      "name": "纳指100",
+      "code": "NDX",
+      "value": 28.89,
+      "percentile": 39.32,
       "judge": "normal",
       "updated": "2026-10-25T16:00:00+00:00"
     },
@@ -509,5 +509,5 @@
       "updated": "2026-10-25T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-10-27T00:10:57.783821+00:00"
+  "generatedAt": "2026-10-27T05:21:30.992902+00:00"
 }
