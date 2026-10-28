@@ -1,15 +1,15 @@
 {
   "gold": {
-    "priceCNY": 874.81,
-    "updated": "2026-10-28T00:12:33.717881+00:00"
+    "priceCNY": 865.95,
+    "updated": "2026-10-28T06:00:01.056431+00:00"
   },
   "ndx": {
     "value": 27.32,
-    "updated": "2026-10-28T00:12:33.717881+00:00"
+    "updated": "2026-10-28T06:00:01.056431+00:00"
   },
   "spx": {
     "value": 24.07,
-    "updated": "2026-10-28T00:12:33.717881+00:00"
+    "updated": "2026-10-28T06:00:01.056431+00:00"
   },
   "catalog": [
     {
@@ -31,7 +31,7 @@
     {
       "name": "中概互联50",
       "code": "CSIH30533",
-      "value": 14.95,
+      "value": 14.96,
       "percentile": 0.36,
       "judge": "low",
       "updated": "2026-10-26T16:00:00+00:00"
@@ -39,10 +39,10 @@
     {
       "name": "中国互联",
       "code": "CSIH11136",
-      "value": 17.41,
-      "percentile": 12.64,
+      "value": 17.32,
+      "percentile": 12.32,
       "judge": "low",
-      "updated": "2026-10-25T16:00:00+00:00"
+      "updated": "2026-10-26T16:00:00+00:00"
     },
     {
       "name": "新能源车",
@@ -95,10 +95,10 @@
     {
       "name": "新经济",
       "code": "HKHSSCNE",
-      "value": 21.67,
-      "percentile": 26.07,
+      "value": 21.38,
+      "percentile": 23.3,
       "judge": "low",
-      "updated": "2026-10-25T16:00:00+00:00"
+      "updated": "2026-10-26T16:00:00+00:00"
     },
     {
       "name": "主要消费",
@@ -151,10 +151,10 @@
     {
       "name": "香港大盘",
       "code": "HSFML25",
-      "value": 8.73,
-      "percentile": 37.4,
+      "value": 8.74,
+      "percentile": 37.76,
       "judge": "normal",
-      "updated": "2026-10-25T16:00:00+00:00"
+      "updated": "2026-10-26T16:00:00+00:00"
     },
     {
       "name": "50AH优选",
@@ -287,10 +287,10 @@
     {
       "name": "国企指数",
       "code": "HKHSCEI",
-      "value": 9.0,
-      "percentile": 58.28,
+      "value": 9.01,
+      "percentile": 58.44,
       "judge": "normal",
-      "updated": "2026-10-25T16:00:00+00:00"
+      "updated": "2026-10-26T16:00:00+00:00"
     },
     {
       "name": "红利低波",
@@ -343,10 +343,10 @@
     {
       "name": "恒生指数",
       "code": "HKHSI",
-      "value": 10.18,
-      "percentile": 41.92,
+      "value": 10.1,
+      "percentile": 39.64,
       "judge": "normal",
-      "updated": "2026-10-25T16:00:00+00:00"
+      "updated": "2026-10-26T16:00:00+00:00"
     },
     {
       "name": "央视50",
@@ -423,10 +423,10 @@
     {
       "name": "香港中小",
       "code": "SPHCMSHP",
-      "value": 15.99,
-      "percentile": 68.56,
+      "value": 15.84,
+      "percentile": 67.08,
       "judge": "normal",
-      "updated": "2026-10-25T16:00:00+00:00"
+      "updated": "2026-10-26T16:00:00+00:00"
     },
     {
       "name": "德国DAX",
@@ -463,10 +463,10 @@
     {
       "name": "标普500",
       "code": "SP500",
-      "value": 24.59,
-      "percentile": 51.92,
+      "value": 24.62,
+      "percentile": 52.04,
       "judge": "normal",
-      "updated": "2026-10-25T16:00:00+00:00"
+      "updated": "2026-10-26T16:00:00+00:00"
     },
     {
       "name": "中证500",
@@ -479,10 +479,10 @@
     {
       "name": "纳指100",
       "code": "NDX",
-      "value": 28.89,
-      "percentile": 39.32,
+      "value": 29.2,
+      "percentile": 40.52,
       "judge": "normal",
-      "updated": "2026-10-25T16:00:00+00:00"
+      "updated": "2026-10-26T16:00:00+00:00"
     },
     {
       "name": "5G通讯",
@@ -509,5 +509,5 @@
       "updated": "2026-10-26T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-10-28T00:12:33.717881+00:00"
+  "generatedAt": "2026-10-28T06:00:01.056431+00:00"
 }
