@@ -1,48 +1,48 @@
 {
   "gold": {
-    "priceCNY": 873.8,
-    "updated": "2026-11-11T07:34:49.412838+00:00"
+    "priceCNY": 861.53,
+    "updated": "2026-11-11T15:46:32.687274+00:00"
   },
   "ndx": {
-    "value": 29.25,
-    "updated": "2026-11-11T07:34:49.412838+00:00"
+    "value": 29.73,
+    "updated": "2026-11-11T15:46:32.687274+00:00"
   },
   "spx": {
-    "value": 24.52,
-    "updated": "2026-11-11T07:34:49.412838+00:00"
+    "value": 24.72,
+    "updated": "2026-11-11T15:46:32.687274+00:00"
   },
   "catalog": [
     {
       "name": "证券公司",
       "code": "SZ399975",
-      "value": 12.2,
-      "percentile": 1.04,
+      "value": 12.1,
+      "percentile": 0.92,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "养老产业",
       "code": "SZ399812",
-      "value": 14.95,
-      "percentile": 16.96,
+      "value": 14.81,
+      "percentile": 16.32,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "中概互联50",
       "code": "CSIH30533",
-      "value": 16.21,
-      "percentile": 2.68,
+      "value": 15.97,
+      "percentile": 2.08,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "新能源车",
       "code": "SZ399417",
-      "value": 18.31,
-      "percentile": 9.64,
+      "value": 18.2,
+      "percentile": 9.24,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "中国互联",
@@ -53,140 +53,140 @@
       "updated": "2026-11-09T16:00:00+00:00"
     },
     {
-      "name": "深证100",
-      "code": "SZ399330",
-      "value": 21.26,
-      "percentile": 27.32,
-      "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
-    },
-    {
       "name": "恒生科技",
       "code": "HKHSTECH",
-      "value": 21.6,
-      "percentile": 20.18,
+      "value": 21.3,
+      "percentile": 17.09,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
+    },
+    {
+      "name": "深证100",
+      "code": "SZ399330",
+      "value": 21.43,
+      "percentile": 29.48,
+      "judge": "low",
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "消费红利",
       "code": "CSIH30094",
-      "value": 22.09,
-      "percentile": 24.4,
+      "value": 21.55,
+      "percentile": 23.28,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "中证白酒",
       "code": "SZ399997",
-      "value": 22.69,
-      "percentile": 26.2,
+      "value": 22.06,
+      "percentile": 25.52,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "国证食品",
       "code": "SZ399396",
-      "value": 23.02,
-      "percentile": 25.52,
+      "value": 22.48,
+      "percentile": 24.48,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "中证医疗",
       "code": "SZ399989",
-      "value": 27.79,
-      "percentile": 11.6,
+      "value": 27.57,
+      "percentile": 11.32,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
-    },
-    {
-      "name": "创业板",
-      "code": "SZ399006",
-      "value": 28.29,
-      "percentile": 8.48,
-      "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "全指医药",
       "code": "SH000991",
-      "value": 28.83,
-      "percentile": 15.8,
+      "value": 28.59,
+      "percentile": 13.92,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "医药100",
       "code": "SH000978",
-      "value": 29.09,
-      "percentile": 20.72,
+      "value": 28.85,
+      "percentile": 19.0,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
+    },
+    {
+      "name": "创业板",
+      "code": "SZ399006",
+      "value": 28.99,
+      "percentile": 11.36,
+      "judge": "low",
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "沪深300",
       "code": "SH000300",
-      "value": 13.46,
-      "percentile": 66.44,
+      "value": 13.45,
+      "percentile": 66.16,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
-    },
-    {
-      "name": "国证A指",
-      "code": "SZ399317",
-      "value": 19.45,
-      "percentile": 67.52,
-      "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "基本面60",
       "code": "SZ399701",
-      "value": 19.56,
-      "percentile": 44.68,
+      "value": 19.35,
+      "percentile": 42.12,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "基本面120",
       "code": "SZ399702",
-      "value": 20.89,
-      "percentile": 51.8,
+      "value": 20.85,
+      "percentile": 51.12,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "全指可选",
       "code": "SH000989",
-      "value": 22.23,
-      "percentile": 33.28,
+      "value": 22.12,
+      "percentile": 32.08,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
-    },
-    {
-      "name": "5G通讯",
-      "code": "CSI931079",
-      "value": 25.22,
-      "percentile": 8.65,
-      "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
-    },
-    {
-      "name": "TMT50",
-      "code": "SZ399610",
-      "value": 25.22,
-      "percentile": 5.04,
-      "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "深证成指",
       "code": "SZ399001",
-      "value": 25.25,
-      "percentile": 37.72,
+      "value": 25.48,
+      "percentile": 40.36,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
+    },
+    {
+      "name": "TMT50",
+      "code": "SZ399610",
+      "value": 26.33,
+      "percentile": 8.56,
+      "judge": "low",
+      "updated": "2026-11-10T16:00:00+00:00"
+    },
+    {
+      "name": "主要消费",
+      "code": "SH000932",
+      "value": 26.76,
+      "percentile": 35.16,
+      "judge": "normal",
+      "updated": "2026-11-10T16:00:00+00:00"
+    },
+    {
+      "name": "中证环保",
+      "code": "SH000827",
+      "value": 26.77,
+      "percentile": 41.16,
+      "judge": "normal",
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "纳指100",
@@ -197,116 +197,116 @@
       "updated": "2026-11-09T16:00:00+00:00"
     },
     {
-      "name": "中证环保",
-      "code": "SH000827",
-      "value": 26.99,
-      "percentile": 41.92,
-      "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
-    },
-    {
-      "name": "主要消费",
-      "code": "SH000932",
-      "value": 27.37,
-      "percentile": 38.64,
-      "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "name": "5G通讯",
+      "code": "CSI931079",
+      "value": 26.96,
+      "percentile": 16.68,
+      "judge": "low",
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "科技龙头",
       "code": "CSI931087",
-      "value": 28.84,
-      "percentile": 4.96,
+      "value": 30.02,
+      "percentile": 6.84,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "中证电子",
       "code": "CSI930652",
-      "value": 34.97,
-      "percentile": 19.4,
+      "value": 36.09,
+      "percentile": 21.28,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "全指信息",
       "code": "SH000993",
-      "value": 37.37,
-      "percentile": 12.16,
+      "value": 38.46,
+      "percentile": 13.2,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "中证1000",
       "code": "SH000852",
-      "value": 39.17,
-      "percentile": 55.32,
+      "value": 39.68,
+      "percentile": 58.64,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "中证军工",
       "code": "SZ399967",
-      "value": 56.05,
-      "percentile": 24.96,
+      "value": 55.92,
+      "percentile": 24.4,
       "judge": "low",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "标普价值",
       "code": "SPACEVCP",
-      "value": 7.22,
-      "percentile": 71.0,
+      "value": 7.17,
+      "percentile": 70.0,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "中证银行",
       "code": "SZ399986",
-      "value": 7.68,
-      "percentile": 97.8,
+      "value": 7.62,
+      "percentile": 97.4,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "红利成长LV",
       "code": "CSI931157",
-      "value": 8.17,
-      "percentile": 70.49,
-      "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "value": 8.09,
+      "percentile": 68.38,
+      "judge": "normal",
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "红利低波",
       "code": "CSIH30269",
-      "value": 8.97,
-      "percentile": 79.8,
+      "value": 8.92,
+      "percentile": 79.76,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "中证红利",
       "code": "SH000922",
-      "value": 8.99,
-      "percentile": 85.36,
+      "value": 8.95,
+      "percentile": 85.0,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "上证红利",
       "code": "SH000015",
-      "value": 9.07,
-      "percentile": 97.44,
+      "value": 9.05,
+      "percentile": 97.2,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "300价值",
       "code": "SH000919",
-      "value": 9.63,
-      "percentile": 86.32,
+      "value": 9.57,
+      "percentile": 85.84,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
+    },
+    {
+      "name": "300红利LV",
+      "code": "CSI930740",
+      "value": 9.69,
+      "percentile": 93.44,
+      "judge": "high",
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "香港大盘",
@@ -317,20 +317,12 @@
       "updated": "2026-11-09T16:00:00+00:00"
     },
     {
-      "name": "300红利LV",
-      "code": "CSI930740",
-      "value": 9.79,
-      "percentile": 94.0,
-      "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
-    },
-    {
       "name": "50AH优选",
       "code": "SH000170",
-      "value": 9.81,
-      "percentile": 54.0,
+      "value": 9.76,
+      "percentile": 52.88,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "国企指数",
@@ -343,18 +335,18 @@
     {
       "name": "基本面50",
       "code": "SH000925",
-      "value": 10.12,
-      "percentile": 80.0,
+      "value": 10.05,
+      "percentile": 77.92,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "央视50",
       "code": "SZ399550",
-      "value": 10.85,
-      "percentile": 90.6,
+      "value": 10.76,
+      "percentile": 89.72,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "恒生指数",
@@ -367,42 +359,42 @@
     {
       "name": "标普红利",
       "code": "CSPSADRP",
-      "value": 11.31,
-      "percentile": 99.64,
+      "value": 11.21,
+      "percentile": 99.6,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "上证50",
       "code": "SH000016",
-      "value": 11.58,
-      "percentile": 81.08,
+      "value": 11.54,
+      "percentile": 79.52,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "上证180",
       "code": "SH000010",
-      "value": 11.99,
-      "percentile": 74.96,
+      "value": 11.96,
+      "percentile": 74.04,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "MSCI中国",
       "code": "CSI716567",
-      "value": 13.47,
-      "percentile": 62.39,
+      "value": 13.51,
+      "percentile": 63.32,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "东证竞争",
       "code": "CSI931142",
-      "value": 14.11,
-      "percentile": 49.56,
+      "value": 14.17,
+      "percentile": 51.04,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "标普质量",
@@ -410,23 +402,23 @@
       "value": 15.64,
       "percentile": 39.72,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
-    },
-    {
-      "name": "中证100",
-      "code": "SH000903",
-      "value": 15.91,
-      "percentile": 88.56,
-      "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "深证红利",
       "code": "SZ399324",
-      "value": 16.04,
-      "percentile": 56.44,
+      "value": 15.88,
+      "percentile": 51.84,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
+    },
+    {
+      "name": "中证100",
+      "code": "SH000903",
+      "value": 15.9,
+      "percentile": 88.52,
+      "judge": "high",
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "香港中小",
@@ -439,26 +431,34 @@
     {
       "name": "中证煤炭",
       "code": "SZ399998",
-      "value": 17.41,
-      "percentile": 82.28,
+      "value": 17.47,
+      "percentile": 82.4,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "德国DAX",
       "code": "GDAXI",
-      "value": 18.18,
-      "percentile": 56.88,
+      "value": 18.23,
+      "percentile": 58.04,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
+    },
+    {
+      "name": "国证A指",
+      "code": "SZ399317",
+      "value": 19.55,
+      "percentile": 68.4,
+      "judge": "normal",
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "500低波",
       "code": "CSI930782",
-      "value": 19.97,
-      "percentile": 49.32,
+      "value": 19.92,
+      "percentile": 48.8,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "新经济",
@@ -479,35 +479,35 @@
     {
       "name": "中证500",
       "code": "SH000905",
-      "value": 28.12,
-      "percentile": 61.28,
+      "value": 28.38,
+      "percentile": 62.64,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "MSCI印度",
       "code": "935600",
       "value": 36.93,
-      "percentile": 81.16,
+      "percentile": 81.12,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "中证传媒",
       "code": "SZ399971",
-      "value": 37.85,
-      "percentile": 63.36,
+      "value": 37.87,
+      "percentile": 63.4,
       "judge": "normal",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     },
     {
       "name": "科创50",
       "code": "SH000688",
-      "value": 93.19,
-      "percentile": 75.03,
+      "value": 95.43,
+      "percentile": 75.59,
       "judge": "high",
-      "updated": "2026-11-09T16:00:00+00:00"
+      "updated": "2026-11-10T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-11-11T07:34:49.412838+00:00"
+  "generatedAt": "2026-11-11T15:46:32.687274+00:00"
 }
