@@ -23,7 +23,7 @@
     {
       "name": "中概互联50",
       "code": "CSIH30533",
-      "value": 12.76,
+      "value": 12.77,
       "percentile": 0.08,
       "judge": "low",
       "updated": "2026-11-23T16:00:00+00:00"
@@ -31,10 +31,10 @@
     {
       "name": "中国互联",
       "code": "CSIH11136",
-      "value": 14.33,
-      "percentile": 0.04,
+      "value": 14.2,
+      "percentile": 0.0,
       "judge": "low",
-      "updated": "2026-11-22T16:00:00+00:00"
+      "updated": "2026-11-23T16:00:00+00:00"
     },
     {
       "name": "养老产业",
@@ -63,10 +63,10 @@
     {
       "name": "新经济",
       "code": "HKHSSCNE",
-      "value": 17.68,
-      "percentile": 1.44,
+      "value": 17.73,
+      "percentile": 1.6,
       "judge": "low",
-      "updated": "2026-11-22T16:00:00+00:00"
+      "updated": "2026-11-23T16:00:00+00:00"
     },
     {
       "name": "深证100",
@@ -167,18 +167,18 @@
     {
       "name": "香港大盘",
       "code": "HSFML25",
-      "value": 8.85,
-      "percentile": 40.4,
+      "value": 8.79,
+      "percentile": 38.44,
       "judge": "normal",
-      "updated": "2026-11-22T16:00:00+00:00"
+      "updated": "2026-11-23T16:00:00+00:00"
     },
     {
       "name": "国企指数",
       "code": "HKHSCEI",
-      "value": 9.06,
-      "percentile": 58.56,
+      "value": 8.99,
+      "percentile": 57.0,
       "judge": "normal",
-      "updated": "2026-11-22T16:00:00+00:00"
+      "updated": "2026-11-23T16:00:00+00:00"
     },
     {
       "name": "MSCI中国",
@@ -223,10 +223,10 @@
     {
       "name": "标普500",
       "code": "SP500",
-      "value": 22.35,
-      "percentile": 21.8,
+      "value": 22.19,
+      "percentile": 21.16,
       "judge": "low",
-      "updated": "2026-11-22T16:00:00+00:00"
+      "updated": "2026-11-23T16:00:00+00:00"
     },
     {
       "name": "5G通讯",
@@ -247,10 +247,10 @@
     {
       "name": "纳指100",
       "code": "NDX",
-      "value": 25.31,
-      "percentile": 13.96,
+      "value": 24.85,
+      "percentile": 11.32,
       "judge": "low",
-      "updated": "2026-11-22T16:00:00+00:00"
+      "updated": "2026-11-23T16:00:00+00:00"
     },
     {
       "name": "中证环保",
@@ -367,10 +367,10 @@
     {
       "name": "恒生指数",
       "code": "HKHSI",
-      "value": 10.15,
-      "percentile": 40.48,
+      "value": 10.09,
+      "percentile": 38.68,
       "judge": "normal",
-      "updated": "2026-11-22T16:00:00+00:00"
+      "updated": "2026-11-23T16:00:00+00:00"
     },
     {
       "name": "300红利LV",
@@ -431,10 +431,10 @@
     {
       "name": "香港中小",
       "code": "SPHCMSHP",
-      "value": 15.22,
-      "percentile": 57.88,
+      "value": 15.02,
+      "percentile": 55.88,
       "judge": "normal",
-      "updated": "2026-11-22T16:00:00+00:00"
+      "updated": "2026-11-23T16:00:00+00:00"
     },
     {
       "name": "深证红利",
@@ -509,5 +509,5 @@
       "updated": "2026-11-23T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-11-24T18:59:26.974049+00:00"
+  "generatedAt": "2026-11-25T02:58:13.818325+00:00"
 }
