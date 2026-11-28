@@ -1,15 +1,15 @@
 {
   "gold": {
-    "priceCNY": 783.31,
-    "updated": "2026-11-27T23:09:09.342821+00:00"
+    "priceCNY": 782.83,
+    "updated": "2026-11-28T04:49:19.908166+00:00"
   },
   "ndx": {
     "value": 28.22,
-    "updated": "2026-11-27T23:09:09.342821+00:00"
+    "updated": "2026-11-28T04:49:19.908166+00:00"
   },
   "spx": {
     "value": 23.81,
-    "updated": "2026-11-27T23:09:09.342821+00:00"
+    "updated": "2026-11-28T04:49:19.908166+00:00"
   },
   "catalog": [
     {
@@ -23,7 +23,7 @@
     {
       "name": "中概互联50",
       "code": "CSIH30533",
-      "value": 12.91,
+      "value": 12.95,
       "percentile": 0.2,
       "judge": "low",
       "updated": "2026-11-26T16:00:00+00:00"
@@ -31,10 +31,10 @@
     {
       "name": "中国互联",
       "code": "CSIH11136",
-      "value": 14.19,
-      "percentile": 0.04,
+      "value": 14.35,
+      "percentile": 0.2,
       "judge": "low",
-      "updated": "2026-11-25T16:00:00+00:00"
+      "updated": "2026-11-26T16:00:00+00:00"
     },
     {
       "name": "养老产业",
@@ -63,10 +63,10 @@
     {
       "name": "新经济",
       "code": "HKHSSCNE",
-      "value": 17.31,
-      "percentile": 0.41,
+      "value": 17.66,
+      "percentile": 1.44,
       "judge": "low",
-      "updated": "2026-11-25T16:00:00+00:00"
+      "updated": "2026-11-26T16:00:00+00:00"
     },
     {
       "name": "深证100",
@@ -151,18 +151,18 @@
     {
       "name": "香港大盘",
       "code": "HSFML25",
-      "value": 8.86,
-      "percentile": 40.48,
+      "value": 8.84,
+      "percentile": 39.64,
       "judge": "normal",
-      "updated": "2026-11-25T16:00:00+00:00"
+      "updated": "2026-11-26T16:00:00+00:00"
     },
     {
       "name": "国企指数",
       "code": "HKHSCEI",
       "value": 9.06,
-      "percentile": 58.76,
+      "percentile": 58.64,
       "judge": "normal",
-      "updated": "2026-11-25T16:00:00+00:00"
+      "updated": "2026-11-26T16:00:00+00:00"
     },
     {
       "name": "基本面60",
@@ -191,10 +191,10 @@
     {
       "name": "标普500",
       "code": "SP500",
-      "value": 22.1,
-      "percentile": 20.72,
+      "value": 22.45,
+      "percentile": 22.32,
       "judge": "low",
-      "updated": "2026-11-25T16:00:00+00:00"
+      "updated": "2026-11-26T16:00:00+00:00"
     },
     {
       "name": "深证成指",
@@ -207,10 +207,10 @@
     {
       "name": "纳指100",
       "code": "NDX",
-      "value": 24.61,
-      "percentile": 10.0,
+      "value": 25.14,
+      "percentile": 12.88,
       "judge": "low",
-      "updated": "2026-11-25T16:00:00+00:00"
+      "updated": "2026-11-26T16:00:00+00:00"
     },
     {
       "name": "中证环保",
@@ -349,19 +349,19 @@
       "updated": "2026-11-26T16:00:00+00:00"
     },
     {
-      "name": "恒生指数",
-      "code": "HKHSI",
-      "value": 10.08,
-      "percentile": 38.28,
-      "judge": "normal",
-      "updated": "2026-11-25T16:00:00+00:00"
-    },
-    {
       "name": "300红利LV",
       "code": "CSI930740",
       "value": 10.13,
       "percentile": 96.52,
       "judge": "high",
+      "updated": "2026-11-26T16:00:00+00:00"
+    },
+    {
+      "name": "恒生指数",
+      "code": "HKHSI",
+      "value": 10.15,
+      "percentile": 40.44,
+      "judge": "normal",
       "updated": "2026-11-26T16:00:00+00:00"
     },
     {
@@ -429,18 +429,18 @@
       "updated": "2026-11-26T16:00:00+00:00"
     },
     {
-      "name": "香港中小",
-      "code": "SPHCMSHP",
-      "value": 14.83,
-      "percentile": 53.88,
-      "judge": "normal",
-      "updated": "2026-11-25T16:00:00+00:00"
-    },
-    {
       "name": "深证红利",
       "code": "SZ399324",
       "value": 15.36,
       "percentile": 35.56,
+      "judge": "normal",
+      "updated": "2026-11-26T16:00:00+00:00"
+    },
+    {
+      "name": "香港中小",
+      "code": "SPHCMSHP",
+      "value": 15.51,
+      "percentile": 62.28,
       "judge": "normal",
       "updated": "2026-11-26T16:00:00+00:00"
     },
@@ -509,5 +509,5 @@
       "updated": "2026-11-26T16:00:00+00:00"
     }
   ],
-  "generatedAt": "2026-11-27T23:09:09.342821+00:00"
+  "generatedAt": "2026-11-28T04:49:19.908166+00:00"
 }
